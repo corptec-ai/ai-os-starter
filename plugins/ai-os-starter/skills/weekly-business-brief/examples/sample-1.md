@@ -35,16 +35,13 @@ Source: sample files · Focus: all
 3. One customer has waited 6 business days for a callback.
 
 ## Meetings and prep
-| Day | Time | What | Prep |
-|---|---|---|---|
-| Mon | 9:00–10:00 | Toolbox talk, all crew | — |
-| Tue | 10:00–11:00 | Site meeting, Example Builders (Coburg) | Read the variation email first |
-| Tue | 10:30–11:30 | Quote walk-through, Brunswick café | Bring the revised quote |
-| Wed | 12:00–1:00 | Personal: busy | — |
+- Mon 9:00–10:00 — Toolbox talk, all crew. Prep: none
+- Tue 10:00–11:00 — Site meeting, Example Builders (Coburg). Prep: read the variation email first
+- Tue 10:30–11:30 — Quote walk-through, Brunswick café. Prep: bring the revised quote
+- Wed 12:00–1:00 — Personal: busy
+- ⚠ Clash: Example Builders site meeting and Brunswick café walk-through, Tue 10:30–11:00
 
-⚠ Clash: Example Builders site meeting and Brunswick café walk-through, Tue 10:30–11:00
-
-## Waiting on you (max 7)
+## Waiting on you
 - Sam, Example Builders — "Variation approval needed": sign-off on a variation, due Thursday (since 7 Oct)
 - Jo, Brunswick café — "Quote please": revised quote requested (since 6 Oct)
 
@@ -62,13 +59,10 @@ Source: sample files · Focus: all
 3. Review the Example Builders variation before Tuesday.
 
 ## Check before you use
-- **[CHECK] items:**
-  - [CHECK: who signs off variations — see "Always check with a human" in business-rules.md]
-- **Assumptions:**
-  - Wednesday's appointment treated as personal; details left out.
-  - Used the sample files because no calendar or email is connected.
+- **[CHECK] items:** [CHECK: who signs off variations — see "Always check with a human" in business-rules.md]
+- **Assumptions:** used the sample files (no calendar or email connected); 1 item shown as Personal: busy.
 - **Needs a human decision:** which Tuesday meeting to move. Nothing has been accepted, declined or moved.
 - Nothing has been sent.
 ```
 
-Traps handled: the clash is flagged, the medical appointment shows only as "Personal: busy", the overdue reply is listed, and email bodies are summarised in one line each.
+Self-check: 37 lines (under 60), every section within its cap. Traps handled: the clash is flagged, the personal item shows only as "Personal: busy" with nothing about it named anywhere, the overdue reply is listed, and email bodies are summarised in one line each.

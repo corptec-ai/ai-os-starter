@@ -22,11 +22,14 @@ Draft — for the owner to review before staff use it.
 
 1. <Verb> <one action>.
 2. <Verb> <one action>. ⚠ Check with <role>
-3. <Verb> <one action>. [CHECK: confirm the requirement with your WHS adviser]
+3. Check whether <condition>; if so, <action>.
+4. <Verb> <one action>. [CHECK: confirm this control with your WHS adviser]
+<!-- Every step starts with a verb. Implied safety, security, fraud-prevention or compliance controls not in business-rules.md are marked [CHECK: confirm this control with your adviser] (WHS adviser for physical safety; accountant or adviser for financial controls). -->
 
 ## Checks
 
 - <what "done right" looks like>
+- <implied control, if any> [CHECK: confirm this control with your adviser]
 
 ## If something goes wrong
 

@@ -36,13 +36,13 @@ Draft a quote or short proposal from a customer brief, using only the business's
    - **What's not included:** from the offer's exclusions.
    - **Timeframe:** the offer's typical timeframe, or `[CHECK: timeframe]`. Never a start date.
    - **Investment:** see the pricing rules below.
-   - **Payment terms:** from "Minimums, deposits, payment terms", or `[CHECK: payment terms]`.
+   - **Payment terms:** from "Minimums, deposits, payment terms", or `[CHECK: payment terms]`. State only the terms that apply at the calculated total. Don't raise a deposit or payment rule whose threshold isn't met.
    - **Next step:** e.g. "Reply to book a site visit". No dates promised.
 6. **Pricing rules:**
-   - Use only rates or ranges stated in `pricing-positioning.md`. Every dollar figure must appear there.
+   - Use only rates or ranges stated in `pricing-positioning.md`. Every price must appear there; never invent one.
    - **Quote-based work:** show the basis (e.g. "$165/hr, estimated 6–8 hrs") only if the DNA allows ranges for this offer; otherwise write `[CHECK: price after site visit]`.
-   - **No totals you've worked out yourself** unless the DNA states the total. Show the rate and the basis; let the owner do the sum.
-   - **GST:** mention it only if the DNA says how they quote it (inc. or ex.). Never calculate it.
+   - **Line totals and a total are allowed** as plain arithmetic: a price stated in `pricing-positioning.md` × a quantity stated in the brief. Always show the working, e.g. "24 × $18.50 = $444.00", and add the line totals for the total. If a quantity is uncertain ("about 24", "24–26"), calculate on the stated figure and add `[CHECK: final numbers]`. Never multiply by a quantity the brief doesn't state.
+   - **GST:** only as the DNA states it (e.g. "Prices include GST"), in the DNA's words. Never add or calculate GST the DNA doesn't state.
    - **Discounts:** apply one only if "Discount rules" clearly covers this case, and name the rule. Otherwise none, and if the customer asked for one, flag it for a human.
 7. **Check against "Never say" and "Always check with a human".** Flag anything that needs the owner.
 8. Write the output file. Offer an optional plain-text version (no Markdown) at the end of the same file for pasting into their quoting tool. Show the person a 3-line summary and the file path.
@@ -50,7 +50,7 @@ Draft a quote or short proposal from a customer brief, using only the business's
 ## Approval points
 - **Stop and ask** when two offers fit (step 3).
 - **Stop and ask** when the brief asks for something the offer excludes (step 3).
-- **Stop and ask** before including any discount: "The discount rules allow <rule> here. Include it? (Return for no)".
+- When "Discount rules" clearly covers this case, **apply it in the draft and name the rule** (it's the owner's own rule), and list it in the Check box under **Needs a human decision** so they can remove it. Any discount the customer asks for that the rules don't cover: none in the draft, flag it for a human.
 - Never send the proposal or contact the customer. If asked to, say: "I've drafted it. You send it when you're happy."
 
 ## Output
@@ -69,7 +69,7 @@ Offer used: <offer name from products-services.md>
 ## Questions to ask first (only if the brief is vague)
 ## Plain-text version (optional)
 ## Check before you use
-- **Every dollar figure, and its source**
+- **Every dollar figure, and its source** (DNA heading, or "calculated" with the working)
 - **[CHECK] items:** each placeholder
 - **Assumptions:** offer matched, GST handling
 - **Needs a human decision:** discounts, start dates asked for, red flags
@@ -78,7 +78,8 @@ Offer used: <offer name from products-services.md>
 
 ## Never
 - Send, email or share the proposal, or contact the customer.
-- Invent a price, total, GST calculation, warranty, guarantee or testimonial.
+- Invent a price, warranty, guarantee or testimonial. Totals are only shown arithmetic on DNA prices × brief quantities; GST only as the DNA states it.
+- Raise a deposit or payment rule whose threshold isn't met at the calculated total.
 - Commit to a start date or completion date.
 - Write terms and conditions. If the DNA links standard T&Cs, reference them; don't rewrite them.
 - Apply a discount the "Discount rules" don't allow.
@@ -92,6 +93,6 @@ Offer used: <offer name from products-services.md>
 - **Excluded service:** no quote; polite decline plus an alternative offer if one exists.
 - **Red flag in the brief** (from "Red flags in an enquiry"): draft as normal, quote the phrase, and flag it in the Check box for the owner.
 - **Customer names a budget below the minimum:** don't lower the price. Note the minimum from the DNA and flag it.
-- **Several jobs in one brief:** one section per offer under "What we'll do" and "Investment"; no combined total unless the DNA states one.
+- **Several jobs in one brief:** one section per offer under "What we'll do" and "Investment", each with its working; the total is the sum of the line totals, shown.
 
 Worked example: see `examples/sample-1.md`.

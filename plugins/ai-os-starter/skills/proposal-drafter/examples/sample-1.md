@@ -1,49 +1,85 @@
-# Example: hot water request for Northside Plumbing & Gas (fictional)
+# Example: catering quote for Little Collins Café Group (fictional)
 
 ## Assumed DNA for this example
 (In the business's own files; not pasted into the output.)
-- Offer "Hot water replacement": includes removal of old unit, supply and install of like-for-like unit, compliance certificate; excludes electrical work, upgrades to a different system type, making good of walls. Typical timeframe: half a day once the unit is on site.
-- No heat pump offer in `products-services.md`.
-- Pricing: hot water replacement is quote-based; we're happy to state "labour $165/hr, usually 3–5 hrs; unit priced after site visit". Deposit 30%, balance on completion, 7 days. GST not mentioned.
-- Discount rules: 10% for pensioners on labour only.
-- Brand voice: friendly and plain; sign off "Cheers, The Northside team".
+- Offer "Office catering": includes platters delivered to CBD offices, disposable plates and napkins, pickup of platters next business day; excludes waiting staff, alcohol, and setting up furniture. Typical timeframe: 48 hours' notice.
+- Pricing: fixed per item. Rates we're happy to state: "Sandwich platter $18.50 per person", "Fruit platter $65.00 each". "Prices include GST."
+- Minimums, deposits, payment terms: "Minimum order 10 people. 50% deposit on orders over $1,000. Invoice payable within 7 days of delivery."
+- Discount rules: 10% off for repeat corporate accounts with 5+ orders a year.
+- Brand voice: warm and plain; sign off "Cheers, the Little Collins team".
 
 ## Input (pasted)
 
-From Chris Example, Reservoir (chris@example.com, 0400 000 201):
-"Our electric hot water tank is leaking. We'd like to swap it for a heat pump, and can you start Monday? Also, any chance of mates' rates? Thanks."
+From Priya Example, an office on Collins St (priya@example.com, 0400 000 301):
+"Hi, we'd like lunch for our team training day. Sandwiches for about 24 people (could be 26) and 2 fruit platters. Can you deliver by 12? Thanks."
 
 ## What the skill did
 
-- Matched the closest offer, "Hot water replacement", but it excludes "upgrades to a different system type", and there's no heat pump offer.
-- Didn't quote like-for-like as a substitute. **Stopped and asked:** "Chris asked for a heat pump, which Hot water replacement doesn't include. Draft a short decline offering a like-for-like Hot water replacement as the alternative, or stop here? (Return for the decline)" → owner pressed Return.
-- So no pricing section: a short decline with the alternative only.
+- Matched "Office catering". Nothing in the brief is excluded or on "What we never do".
+- Calculated line totals from DNA prices × brief quantities and showed the working. "About 24 (could be 26)" is uncertain, so it calculated on 24 and added [CHECK: final numbers].
+- The total is $574.00, under the $1,000 deposit threshold, so no deposit is mentioned.
+- No discount: the brief doesn't say they're a repeat corporate account.
+- No delivery date promised; the brief gives no date.
 
-## Output (written to `outputs/proposal-drafter/2026-10-08-chris-reservoir-hot-water.md`)
+## Output (written to `outputs/proposal-drafter/2026-10-08-priya-collins-st-catering.md`)
 
-# Proposal — hot water for Chris, Reservoir (draft, not sent)
+# Proposal — training day lunch for Priya, Collins St (draft, not sent)
 
-Offer used: none (heat pump not offered). Alternative suggested: Hot water replacement (like-for-like).
+Offer used: Office catering
 
 ## What you asked for
-Your electric hot water tank is leaking and you'd like to replace it with a heat pump.
+Lunch for your team training day: sandwiches for about 24 people (could be 26) and 2 fruit platters, delivered by 12.
 
-## Suggested reply (not sent)
-Hi Chris,
+## What we'll do
+- Platters delivered to your office
+- Disposable plates and napkins
+- Pickup of platters the next business day
 
-Thanks for getting in touch, and sorry to hear the tank is leaking. Swapping to a heat pump isn't something we do. [CHECK: anyone you'd suggest instead?]
+## What's not included
+- Waiting staff
+- Alcohol
+- Setting up furniture
 
-What we can do is replace your leaking tank with a like-for-like electric unit. If that suits, reply to this email and we'll book a site visit to price it.
+## Timeframe
+We need 48 hours' notice. We'll confirm the delivery day and time once you're ready to go ahead. [CHECK: confirm we can deliver by 12 on the day they choose]
+
+## Investment
+
+| Item | Working | Line total |
+|---|---|---|
+| Sandwich platter | 24 × $18.50 | $444.00 |
+| Fruit platter | 2 × $65.00 | $130.00 |
+| **Total** | $444.00 + $130.00 | **$574.00** |
+
+[CHECK: final numbers] You said about 24, could be 26. At 26 people the sandwich line would change; we'll update it once you confirm.
+
+Prices include GST.
+
+## Payment terms
+Invoice payable within 7 days of delivery.
+
+## Next step
+Reply with your final numbers and the day you'd like, and we'll lock it in.
 
 Cheers,
-The Northside team
+the Little Collins team
+
+---
+
+## Plain-text version (optional)
+Proposal: training day lunch for Priya, Collins St. Office catering. Sandwich platter 24 x $18.50 = $444.00. Fruit platter 2 x $65.00 = $130.00. Total $574.00. Prices include GST. Includes delivery to your office, plates and napkins, pickup next business day. Not included: waiting staff, alcohol, setting up furniture. 48 hours' notice needed. Invoice payable within 7 days of delivery.
+
+---
 
 ## Check before you use
-- **Every dollar figure, and its source:** none used. No pricing section, because no quote was drafted.
-- **[CHECK] items:** [CHECK: anyone you'd suggest instead?] (only if the DNA names someone to refer heat pump work to).
-- **Assumptions:** "Hot water replacement" is the only offer close to this request; heat pumps fall under its exclusions.
-- **Needs a human decision:**
-  - Heat pump: declined, with like-for-like offered as the alternative. Change this if you do want to quote heat pumps.
-  - Customer asked about a start day: none promised.
-  - "Mates' rates": no discount applied. The only discount rule is for pensioners, and the brief doesn't say that applies.
+- **Every dollar figure, and its source:**
+  - $18.50, $65.00: pricing-positioning.md, "Rates or ranges we're happy to state"
+  - $444.00: calculated, 24 × $18.50
+  - $130.00: calculated, 2 × $65.00
+  - $574.00: calculated, $444.00 + $130.00
+- **[CHECK] items:**
+  - [CHECK: final numbers] (24 or 26 people)
+  - [CHECK: confirm we can deliver by 12 on the day they choose]
+- **Assumptions:** matched to Office catering; calculated on 24 people, the figure stated first; GST as the DNA states it ("Prices include GST"). No deposit: $574.00 is under the $1,000 threshold.
+- **Needs a human decision:** none on discounts (no rule applies). No delivery date promised.
 - Nothing has been sent.
