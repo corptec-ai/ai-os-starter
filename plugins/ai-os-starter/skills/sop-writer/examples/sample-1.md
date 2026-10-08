@@ -25,7 +25,8 @@ old unit back to the yard for recycling.
 
 - One process, order clear, so it asked no questions.
 - Split "drain, take out, put in, connect, test" into one action per step.
-- Kept the gas isolation step but didn't state a rule; added an adviser check.
+- Started every step with a verb. Turned "if the customer wants a bigger unit…" into a "Check whether …; if so, …" step.
+- Kept the implied safety controls (gas and water isolation) as steps, but marked them `[CHECK: confirm this control with your WHS adviser]`, because `business-rules.md` doesn't state them. Marked them the same way in Checks.
 - Replaced Mick's mobile number with the role from business-rules.md and flagged it.
 - Did not describe the compliance certificate as proof the job is compliant.
 - Added nothing the notes don't say unless it's marked `[CHECK]`.
@@ -55,27 +56,29 @@ When a hot water swap is on the job sheet.
 ## Steps
 1. Collect the job sheet from the office.
 2. Check the new unit is the right one before leaving the yard.
-3. Turn off the gas at the meter. [CHECK: confirm the requirement with your WHS adviser]
-4. Turn off the water.
-5. Confirm the gas and water are isolated. [CHECK: confirm the isolation test method with your WHS adviser]
-6. Photograph the old unit (before photo).
-7. Drain the old tank.
-8. Remove the old unit.
-9. Put the new unit in.
-10. Connect the new unit. [CHECK: connections needed]
-11. Test for leaks.
-12. Photograph the new unit (after photo).
-13. Get the compliance certificate done by the licensed tradesperson. [CHECK: confirm the requirement with your WHS adviser]
-14. Take the old unit back to the yard for recycling.
+3. Check whether the customer wants a bigger unit than quoted; if so, stop and call the Operations Manager before doing anything. ⚠ Check with Operations Manager
+4. Turn off the gas at the meter. [CHECK: confirm this control with your WHS adviser]
+5. Turn off the water. [CHECK: confirm this control with your WHS adviser]
+6. Confirm the gas and water are isolated. [CHECK: confirm this control with your WHS adviser] [CHECK: how to test isolation]
+7. Photograph the old unit (before photo).
+8. Drain the old tank.
+9. Remove the old unit.
+10. Put the new unit in.
+11. Connect the new unit. [CHECK: connections needed]
+12. Test for leaks.
+13. Photograph the new unit (after photo).
+14. Arrange the compliance certificate with the licensed tradesperson. [CHECK: confirm this control with your WHS adviser]
+15. Take the old unit back to the yard for recycling.
 
 ## Checks
 - No leaks found in the leak test.
+- Gas and water isolated before the old unit was touched. [CHECK: confirm this control with your WHS adviser]
 - Before and after photos taken.
 - Old unit back at the yard.
 - Job sheet marked complete. [CHECK: confirm]
 
 ## If something goes wrong
-- Customer wants a bigger unit than quoted → stop and call the Operations Manager before doing anything. ⚠ Check with Operations Manager
+- Customer asks for a bigger unit partway through → stop and call the Operations Manager before doing anything. ⚠ Check with Operations Manager
 - A leak you can't fix → isolate the supply again and call the Operations Manager. [CHECK: confirm]
 
 ## Records to keep
@@ -90,9 +93,9 @@ Version: 0.1 draft · Owner: [CHECK: who owns this SOP] · Date: 2026-10-08 · R
 - **[CHECK] items:**
   - [CHECK: which licence or role] (Who)
   - [CHECK: tools and fittings list for a standard swap] (Before you start)
-  - [CHECK: confirm the requirement with your WHS adviser] (steps 3 and 13)
-  - [CHECK: confirm the isolation test method with your WHS adviser] (step 5)
-  - [CHECK: connections needed] (step 10)
+  - [CHECK: confirm this control with your WHS adviser] (steps 4, 5, 6 and 14, and Checks)
+  - [CHECK: how to test isolation] (step 6)
+  - [CHECK: connections needed] (step 11)
   - [CHECK: confirm] the job-sheet check, the leak fallback and the job-sheet record (not in the notes)
   - [CHECK: where photos and the compliance certificate are stored]
   - [CHECK: SOP owner and review date]

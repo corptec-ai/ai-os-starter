@@ -34,13 +34,16 @@ Sort new enquiries by how well they fit the business's ideal customers, spot red
    - **C**: not for us; matches "Who we are not for", wants something in "What we never do", or is outside our area.
    - **?**: not enough to grade. Write the one question to ask, and name the likely offer: next step "Ask question; then <offer>".
    Name the matching segment and give one line of evidence from the enquiry.
-4. **Check red flags.** Compare each enquiry with "Red flags in an enquiry" and "Who we are not for". For any match, **quote the enquiry's exact phrase** and name the red flag it matches. A red flag doesn't change the grade by itself. Show it in the main table's "Red flags" column **and** list the enquiry in the red-flag section.
+4. **Check red flags.** Compare each enquiry with "Red flags in an enquiry" and "Who we are not for", and **quote the enquiry's exact phrase** for any match.
+   - A "Who we are not for" match is grade C; put the quoted phrase in the main table's short "Notes" column.
+   - A "Red flags in an enquiry" match **overrides the fit grade**: grade "Red flag", **not** in the main table, next step "Owner decides", owner the "Always check with a human" role. Name the red flag it matches.
+   - Lesser concerns (tight timing, unclear scope) go in "Notes".
 5. **Ignore protected characteristics.** Age, gender, ethnicity, religion, disability, pregnancy, sexuality, marital status and similar are never a fit signal. Don't mention them in evidence. If a grade would otherwise depend on one, grade on everything else and note "Protected characteristic ignored" in the Check box.
 6. **Suggest a next step** that uses a real offer from `products-services.md`, by its exact name:
    - call, send info about <offer>, book a site visit for <offer>, politely decline, or refer elsewhere.
    - If no offer fits, the step is "decline" or "refer elsewhere". Never invent an offer.
    - Suggest an owner **by role** (from "Escalation contacts by role"), never a personal phone number.
-7. **Sort** the main table A, then B, then C, then ?. Every enquiry stays in the main table, red-flagged ones included. Red-flagged enquiries are **also** listed in their own section after the table, with the quoted phrase.
+7. **Sort** the main table A, then B, then C, then ?. Red-flagged enquiries appear **only** in the "Red-flagged enquiries" section after the table, with the quoted phrase and the matched red flag.
 8. Write the output file. Show the person the summary line and the file path.
 
 ## Approval points
@@ -51,9 +54,9 @@ Write `outputs/enquiry-triage/YYYY-MM-DD-triage.md`. Never overwrite: if the nam
 
 ```
 # Enquiry triage — <date>
-Summary: <n> A · <n> B · <n> C · <n> ? (all enquiries) · <n> of them red-flagged
+Summary: <n> A · <n> B · <n> C · <n> ? · <n> red flag
 
-| # | Enquiry | Grade | Segment | Red flags | Next step (offer) | Owner (role) |
+| # | Enquiry | Grade | Segment | Notes | Next step (offer) | Owner (role) |
 |---|---|---|---|---|---|---|
 
 ## Why the A's
@@ -61,6 +64,7 @@ Summary: <n> A · <n> B · <n> C · <n> ? (all enquiries) · <n> of them red-fla
 
 ## Red-flagged enquiries
 | # | Enquiry | Grade | Quoted phrase | Matches red flag | Next step | Owner (role) |
+| <n> | <who>: <what> | Red flag | "<phrase>" | <red flag> | Owner decides | <"Always check with a human" role> |
 
 ## Need more information (?)
 - #<n> <who>: ask "<question>"
@@ -86,7 +90,7 @@ Summary: <n> A · <n> B · <n> C · <n> ? (all enquiries) · <n> of them red-fla
 - **Not enough to grade:** grade `?` with the single question to ask.
 - **Duplicate:** merge and note "duplicate".
 - **Two offers in one enquiry:** grade on the better-fitting one and mention the other in the next step.
-- **Red flag on an otherwise A lead:** keep the A grade, show it in the main table and the red-flag section, and set the owner to the "Always check with a human" role.
+- **Red flag on an otherwise A lead:** the red flag wins. Grade it "Red flag", leave it out of the main table, list it only in the red-flag section with the quoted phrase, next step "Owner decides", owner the "Always check with a human" role. You may note "otherwise an A" there.
 - **Existing customer** (they say so): grade normally and note "existing customer" in evidence.
 - **Spam or a sales pitch to us:** grade C, next step "no action", and say why.
 

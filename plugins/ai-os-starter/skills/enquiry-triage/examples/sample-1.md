@@ -18,33 +18,30 @@
 
 # Enquiry triage — 2026-10-08
 
-Summary: 1 A · 1 B · 0 C · 2 ? (all enquiries) · 1 of them red-flagged
+Summary: 1 A · 1 B · 0 C · 1 ? · 1 red flag
 
-| # | Enquiry | Grade | Segment | Red flags | Next step (offer) | Owner (role) |
+| # | Enquiry | Grade | Segment | Notes | Next step (offer) | Owner (role) |
 |---|---|---|---|---|---|---|
-| 1 | Sam, Coburg: hot water system failed | A | Homeowners in Melbourne's north | none | Call today; book a site visit for Hot water replacement | Office Manager |
-| 2 | Lee, Preston café: sink drain backing up | B | Small cafés and shops | none | Call; book Blocked drain clear | Office Manager |
-| 3 | Jo: gas BBQ hook-up | ? | — | "Happy to pay cash, no invoice needed" | Hold for the owner; if it goes ahead, ask question; then Gas appliance service (with an invoice) | Operations Manager |
-| 4 | Alex: "Need a plumber" | ? | — | none | Ask question; then Blocked drain clear or Hot water replacement, depending on the job | Office Manager |
+| 1 | Sam, Coburg: hot water system failed | A | Homeowners in Melbourne's north | wants it this week | Call today; book a site visit for Hot water replacement | Office Manager |
+| 2 | Lee, Preston café: sink drain backing up | B | Small cafés and shops | "before Friday" | Call; book Blocked drain clear | Office Manager |
+| 4 | Alex: "Need a plumber" | ? | — | — | Ask question; then Blocked drain clear or Hot water replacement, depending on the job | Office Manager |
 
 ## Why the A's
 - #1 Sam: homeowner in Coburg with a failed hot water system, wants it this week. Matches our main segment and a core offer.
 
 ## Red-flagged enquiries
-Also shown in the main table above.
+Not in the main table. A red flag overrides the fit grade; the owner decides.
 
 | # | Enquiry | Grade | Quoted phrase | Matches red flag | Next step | Owner (role) |
 |---|---|---|---|---|---|---|
-| 3 | Jo: gas BBQ hook-up | ? | "Happy to pay cash, no invoice needed" | wants cash-only work with no invoice | Hold; owner to decide. Gas appliance service may fit only if done the normal way, with an invoice. | Operations Manager |
+| 3 | Jo: gas BBQ hook-up | Red flag | "Happy to pay cash, no invoice needed" | wants cash-only work with no invoice | Owner decides | Operations Manager |
 
 ## Need more information (?)
-- #3 Jo: no suburb and no detail on the BBQ, so it can't be matched to a segment. Ask "Which suburb are you in, and is the BBQ a fixed outdoor unit you want connected to your home's gas supply?"
 - #4 Alex: ask "What's the job, and which suburb are you in?"
 
 ## Check before you use
 - **[CHECK] items:**
   - #2: [CHECK: is a café kitchen drain within Blocked drain clear, or is it commercial work?]
-  - #3: [CHECK: is a BBQ connection covered by Gas appliance service?]
 - **Assumptions:** Coburg and Preston are inside the service area. #2 graded B because "before Friday" may not fit the usual timeframe.
 - **Needs a human decision:** #3 (red flag), for the Operations Manager. Contact details left out of this file on purpose.
 - Nothing has been sent.

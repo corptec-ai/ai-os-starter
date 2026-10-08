@@ -18,11 +18,17 @@ Offer used: <offer name from products-services.md>
 
 ## Investment
 <rate or range from pricing-positioning.md, with the basis, e.g. "$<rate>/hr, estimated <n>–<n> hrs">
+<or, where the DNA states a unit price and the brief states a quantity, show the working:>
+| Item | Working | Line total |
+|---|---|---|
+| <item from pricing-positioning.md> | <qty from brief> × $<price> | $<line total> |
+| **Total** | <line total> + <line total> | **$<total>** |
+<[CHECK: final numbers] if a quantity in the brief is uncertain>
 <or: [CHECK: price after site visit]>
-<GST line only if the DNA says how prices are quoted>
+<GST line only in the DNA's words, e.g. "Prices include GST.">
 
 ## Payment terms
-<deposit and terms from pricing-positioning.md, or [CHECK: payment terms]>
+<only the terms from pricing-positioning.md that apply at this total, or [CHECK: payment terms]. No deposit rule whose threshold isn't met.>
 
 ## Next step
 <e.g. "Reply to this email and we'll book a site visit.">
@@ -43,6 +49,7 @@ Offer used: <offer name from products-services.md>
 ## Check before you use
 - **Every dollar figure, and its source:**
   - $<n>: pricing-positioning.md, "<heading>"
+  - $<total>: calculated, <working>
 - **[CHECK] items:**
   - [CHECK: …]
 - **Assumptions:**

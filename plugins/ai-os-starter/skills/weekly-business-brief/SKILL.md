@@ -29,17 +29,22 @@ If either file is missing or still has `[[FILL]]`, say which one in one line, su
 
 ## Steps
 1. **Read the calendar** for the next 7 days.
-   - List each meeting with its purpose and any prep needed (a document to read, a quote to bring).
+   - List each meeting with its purpose and any prep needed (a document to read, a quote to bring). One line each. Merge routine items (e.g. "Daily 7:00 crew start, Mon–Fri").
    - **Flag clashes**: two items overlapping in time. Name both.
    - Flag back-to-back days (no break of 30 minutes or more between 9am and 5pm).
-   - **Personal, family or medical items:** show only the time and "Personal: busy". Never the title, place, people or notes.
+   - **Personal, family or medical items:** show only the day, time and "Personal: busy". Never name the person, practitioner, place or appointment type, **anywhere** in the brief, including the Check box and assumptions.
 2. **Read email.**
    - **Waiting on you:** questions to the owner, approvals, quotes requested. Max 7, most urgent first.
    - **Overdue replies:** customer email with no reply within the response-time promise.
    - Summarise each in one line with sender and subject. Never quote email bodies at length.
 3. **Spot risks:** overdue promises, unhappy or angry tone, deadlines this week, anything that hits "Always check with a human".
-4. **Write the brief** using the template below. Keep it under 60 lines.
-5. **Show** the "This week in 3 lines" section and the file path.
+4. **Write the brief** using the template below, within these caps:
+   - This week in 3 lines: exactly 3 lines.
+   - Meetings and prep: max 8 bullets, one line each, no table. Clash and back-to-back flags count as bullets.
+   - Waiting on you: max 7. Customers to look after: max 5. Risks: max 4. Suggested first hour: max 3.
+   - Check before you use: max 6 lines.
+5. **Self-check before writing.** Count every line of the brief, including headings, blank lines and the Check box. It must be **under 60**. If not, merge or cut the lowest-priority items and recount. Then check no personal item is named anywhere.
+6. Write the file. **Show** the "This week in 3 lines" section and the file path.
 
 ## Running as a scheduled task
 - Ask **no** questions. Make sensible choices and list them under "Check before you use".
@@ -57,29 +62,28 @@ Write `outputs/weekly-business-brief/YYYY-MM-DD.md` (the date of the Monday the 
 ```
 # Week ahead — <Mon date> to <Sun date>
 Source: <connected calendar and email | sample files | inbox files> · Focus: <all | sales | ops | cash>
-
-## This week in 3 lines
-## Meetings and prep
-| Day | Time | What | Prep |
-⚠ Clash: <item A> and <item B>, <day time>
-## Waiting on you (max 7)
-- <sender> — <subject>: <what they need> (since <date>)
-## Customers to look after
+## This week in 3 lines          (3 lines)
+## Meetings and prep             (max 8 bullets, no table)
+- <Day time> — <what>. Prep: <what to read or bring>
+- <Day time> — Personal: busy
+- ⚠ Clash: <item A> and <item B>, <day time>
+## Waiting on you                (max 7)
+- <sender> — "<subject>": <what they need> (since <date>)
+## Customers to look after       (max 5)
 - <customer> — <why: no reply within promise, unhappy tone, big job this week>
-## Risks
-## Suggested first hour on Monday
-1. … 2. … 3. …
-## Check before you use
-- **[CHECK] items:** each placeholder
-- **Assumptions:** source used, response-time promise used, items treated as personal
-- **Needs a human decision:** anything only the owner can decide
+## Risks                         (max 4)
+## Suggested first hour on Monday (max 3)
+## Check before you use          (max 6 lines)
+- **[CHECK] items:** · **Assumptions:** (source, promise used, "1 item shown as Personal: busy") · **Needs a human decision:**
 - Nothing has been sent.
 ```
+The whole brief is under 60 lines.
 
 ## Never
 - Send, reply, forward, accept or decline invites, move or create meetings, or mark email as read. Read only. If a tool refuses an action, don't look for a way around it.
 - Quote email bodies at length. One line, with sender and subject.
-- Include personal or medical calendar items in detail. Show them as "Personal: busy".
+- Include personal or medical calendar items in detail. Show them only as "Personal: busy". Never name the person, practitioner or appointment type, anywhere.
+- Go over 60 lines, or over any section cap.
 - Make up meetings, senders, deadlines, figures or promises. Anything unclear becomes `[CHECK: …]`.
 - Give legal, tax, financial or HR-law advice. Flag it: "Have your adviser check this."
 - Copy phone numbers, home addresses or other personal details into the brief.
@@ -91,6 +95,6 @@ Source: <connected calendar and email | sample files | inbox files> · Focus: <a
 - **Empty week:** say "Nothing booked" and use the space for waiting items and risks.
 - **Unclear if an item is personal** (for example "Appointment"): treat it as "Personal: busy" and note the assumption.
 - **A red-flag enquiry** (per `ideal-customers.md`): list it under Risks, not Customers to look after.
-- **Over 7 waiting items:** show the top 7 and say "plus <n> more".
+- **Over a section cap** (e.g. 7 waiting items): show the top items and add "(plus <n> more)" to the end of the last item, not as a new line.
 
 Worked example: see `examples/sample-1.md`.
