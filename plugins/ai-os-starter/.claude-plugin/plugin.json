@@ -1,7 +1,7 @@
 {
   "name": "ai-os-starter",
-  "version": "0.1.0",
-  "description": "Starter AI operating system for small and mid-sized businesses, from Corptec's Put AI to Work in Your Business workshop. Test kit v0: workspace check and meeting-to-actions. Drafts only; nothing is sent.",
+  "version": "0.2.0",
+  "description": "Starter AI operating system for small and mid-sized businesses, from Corptec's Put AI to Work in Your Business workshop: ten ready-made workflows plus a workspace check. Drafts only; nothing is sent.",
   "author": {
     "name": "Corptec Technology Partners",
     "url": "https://www.corptec.com.au"
