@@ -45,7 +45,7 @@ Work through these in order. Mark each line 🟢, 🟠 or 🔴 (line 8 is inform
    - runbook: any `workflows/*/RUNBOOK.md`.
 
 ## Output
-On screen only, **under 25 lines**, finishing with the summary line:
+On screen only, **under 25 lines**, finishing with the summary line. **Before writing the summary, count the 🟢, 🟠 and 🔴 lines you've just written** (line 8 has no colour) and use those exact counts:
 
 ```
 Workspace check — <date>
