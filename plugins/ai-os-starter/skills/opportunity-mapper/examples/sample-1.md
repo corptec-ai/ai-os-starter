@@ -33,7 +33,7 @@ Score = Value + Frequency + Return + (6 − Complexity) + (6 − Risk). Maximum 
 Not eligible to pick: task 1 (risk 5: gas safety advice must come from a licensed gasfitter) · task 4 (Eliminate)
 
 ## Eliminate list
-- Retype paper job cards: plumbers enter job notes on their phones in the job system instead, so nobody types them twice.
+- Retype paper job cards (score 18; return only 1 and complexity 2 — the typing shouldn't exist at all): plumbers enter job notes on their phones in the job system instead, so nobody types them twice.
 
 ## Top three
 1. **Reply to hot water quote requests** (score 19) — First version: draft a reply to each hot water quote request from the website form, with the upfront price range and the photos we still need.

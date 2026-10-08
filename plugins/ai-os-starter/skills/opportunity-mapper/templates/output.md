@@ -12,15 +12,15 @@ Score = Value + Frequency + Return + (6 − Complexity) + (6 − Risk). Maximum 
 | # | Task | Owner role | Hours a week | Label | Value | Frequency | Complexity | Risk | Return | Score |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 1 | <task> | <role> | <n> | Automate | <1–5> | <1–5> | <1–5> | <1–5> | <1–5> | <total> |
-| 2 | <task> | <role> | <n> | Accelerate | | | | | | |
-| 3 | <task> | <role> | <n> | Eliminate | | | | | | |
+| 2 | <task> | <role> | <n> | Accelerate | <1–5> | <1–5> | <1–5> | <1–5> | <1–5> | <total> |
+| 3 | <task> | <role> | <n> | Eliminate | <1–5> | <1–5> | <1–5> | <1–5> | <1–5> | <total> |
 | … | | | | | | | | | | |
-| 10 | <task> | <role> | <n> | <label> | | | | | | |
+| 10 | <task> | <role> | <n> | <label> | <1–5> | <1–5> | <1–5> | <1–5> | <1–5> | <total> |
 
 Not eligible to pick: <task> (risk 5: <one-line reason>) · <task> (Eliminate)
 
 ## Eliminate list
-- <task>: <one line on how to stop doing it, e.g. "techs enter job notes on their phones instead">
+- <task> (score <total>; <which scores show why, e.g. "low return, high complexity">): <one line on how to stop doing it, e.g. "techs enter job notes on their phones instead">
 
 ## Top three
 1. **<task>** (score <n>) — First version: <one concrete line that passes the scope test>

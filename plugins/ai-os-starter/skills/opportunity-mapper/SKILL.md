@@ -23,7 +23,7 @@ Help the owner list the recurring work in their business, score it, and pick **o
    - **Eliminate:** it shouldn't exist at all (a fix to the process, not AI).
    - **Automate:** AI does it, a human approves.
    - **Accelerate:** a human does it faster with AI.
-   Eliminate tasks stay in the table so it's complete, but they can't be picked. Give each a one-line note for the Eliminate list.
+   Eliminate tasks are **scored like every other task and stay in the ranked table**, labelled Eliminate, so the owner can see why: the scores (often low value or return, or high risk) plus a one-line reason. They can't be in the top three or be picked. Repeat each in the Eliminate list with its total and reason.
 3. **Score 1–5 on five criteria.** Propose each score with a short reason and let the owner adjust.
    - **Value:** hours a week × who does it. Under 1 hr = 1, 1–2 = 2, 3–4 = 3, 5–8 = 4, 9+ = 5. Add 1 (max 5) if the owner or a manager does it, because their hour counts more.
    - **Frequency:** monthly or less = 1, a few times a month = 2, weekly = 3, a few times a week = 4, daily = 5.
