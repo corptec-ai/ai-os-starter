@@ -1,0 +1,16 @@
+{
+  "name": "corptec",
+  "owner": {
+    "name": "Corptec Technology Partners"
+  },
+  "metadata": {
+    "description": "Corptec's workflow library for the Put AI to Work in Your Business workshop."
+  },
+  "plugins": [
+    {
+      "name": "ai-os-starter",
+      "source": "./plugins/ai-os-starter",
+      "description": "Starter AI operating system for small and mid-sized businesses: workshop guides and ready-made workflows. Drafts only; nothing is sent."
+    }
+  ]
+}

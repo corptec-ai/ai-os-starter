@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "defaultMode": "default",
+    "deny": [
+      "Bash(rm:*)",
+      "Bash(sudo:*)",
+      "Read(./.env)",
+      "Read(./.env.*)"
+    ],
+    "ask": [
+      "Edit(./business-dna/**)",
+      "Edit(./.claude/**)",
+      "Edit(./CLAUDE.md)",
+      "Bash"
+    ],
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Edit(./outputs/**)",
+      "Edit(./workflows/**)",
+      "Edit(./sandbox/**)"
+    ]
+  }
+}
