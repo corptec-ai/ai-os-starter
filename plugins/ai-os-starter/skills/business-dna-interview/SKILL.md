@@ -26,7 +26,7 @@ Turn what the owner already has (the materials in `inbox/` plus their answers) i
    - **Draft every heading** from the materials. Summarise; never paste whole documents.
    - **Show the draft in short form:** one or two lines per heading, with gaps shown as `[[FILL]]`.
 3. **Ask gap questions, one at a time.** Ask only where the materials are silent or contradict each other.
-   - **At most 5 questions per file.** If a gap is still open after 5, leave `[[FILL]]` and move on. The session is timed. Keep the whole interview **under 25 questions**, counting the website and brand questions.
+   - **At most 5 questions per file.** If a gap is still open after 5, leave `[[FILL]]` and move on. The cap limits **questions asked**, not **answers used**: anything the owner has already told you (in their materials, an earlier reply, or answers given up front) goes straight into the file without spending a question. The session is timed. Keep the whole interview **under 25 questions**, counting the website and brand questions.
    - **Every question has a suggested answer** they can accept with Return, e.g. "Your 2025 price list says $165/hr but two quotes use $180. Which is current? (Return for $180, the newer one)".
    - **Contradictions** (old versus new prices, two different payment terms): always ask. Record the answer and today's date in the file, e.g. "Labour $180/hr inc. GST (confirmed 2026-11-11)".
    - If the owner says they'd rather write a file themselves, let them. Afterwards offer to tidy it to the headings, changing nothing else.
