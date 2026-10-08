@@ -14,7 +14,7 @@ The blueprint (`workflows/hot-water-quote-reply/blueprint.md`, v1.1 · 11 Nov ·
 ## What the builder did
 1. Checked the blueprint: nine headings, six steps, four approval points. Ready.
 2. No existing skill with that name.
-3. Wrote `.claude/skills/hot-water-quote-reply/SKILL.md` (92 lines), `templates/output.md` and `examples/sample-1.md`. Self-check before saving: 4 approval points in the blueprint, 4 "Stop and ask" lines in the skill, match; every cited heading found in the DNA; no DNA sentence copied, so the Never list says "Anything in `business-rules.md` → Never say" rather than repeating it.
+3. Wrote `.claude/skills/hot-water-quote-reply/SKILL.md` (92 lines), `templates/output.md` and `examples/sample-1.md`. Self-check before saving: 4 approval points in the blueprint, 4 "Stop and ask" lines in the skill, match; every cited heading found in the DNA; copy check run (searched `business-dna/` for every line mentioning a price, limit or rule; no six-word phrase matched), so the Never list says "Anything in `business-rules.md` → Never say" rather than repeating it.
 4. Showed the diff and explained it:
    - **Description:** picks up "how much for a new hot water system" and "can you quote a replacement", in your words.
    - **Input:** a request file from `inbox/hot-water/`; your office inbox once it's connected in Session 6.
@@ -34,6 +34,15 @@ The blueprint (`workflows/hot-water-quote-reply/blueprint.md`, v1.1 · 11 Nov ·
    `pricing-positioning.md` → Pricing basis per offer, Rates or ranges we're happy to state.
    Produces: the offer, the price line (including GST), or `[CHECK: upfront price after photos]`.
 ...
+## Business rules (from your DNA)
+Read these headings in your Business DNA and follow them. Don't copy them here; if your DNA changes, this skill follows.
+- `products-services.md` → Our offers: what's included in a hot water replacement
+- `pricing-positioning.md` → Rates or ranges we're happy to state: the price range to quote
+- `pricing-positioning.md` → Discount rules: when a discount is allowed
+- `business-rules.md` → Always check with a human: who signs off what
+- `business-rules.md` → Response-time promises: when to say we'll reply
+- `brand-voice.md` → How we sound: how the reply should read
+
 ## Approval points
 - **Stop and ask** (approval point 1, step 6) before treating any reply as ready to send:
   "Office Coordinator to check this draft before it goes to <customer>?" Default is no.

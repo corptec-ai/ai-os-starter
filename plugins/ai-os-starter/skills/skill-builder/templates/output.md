@@ -25,6 +25,11 @@ All in `business-dna/`:
 3. **<Blueprint step 3 name>.** <…> Then approval point 1 applies (see Approval points).
 4. <One numbered step per blueprint step, six at most. A judgement step reads: "Prepare the information and **stop for a human**: <role>.">
 
+## Business rules (from your DNA)
+Read these headings in your Business DNA and follow them. Don't copy them here; if your DNA changes, this skill follows.
+- `<file>.md` → <Heading>: <what it's used for, in your own words>
+- `<file>.md` → <Heading>: <what it's used for, in your own words>
+
 ## Approval points
 <!-- One "Stop and ask" line per blueprint approval point, one to one, and none anywhere else. Count both before saving; they must match. -->
 - **Stop and ask** (approval point 1, step <n>) <before what>: "<question>". Default is no.
