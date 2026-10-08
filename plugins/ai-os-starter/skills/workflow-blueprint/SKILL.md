@@ -15,7 +15,7 @@ It's designed to run in **Plan mode**. If you're not in Plan mode, say once: "Th
 - If neither exists, ask: "What's the workflow? Finish this sentence: When ___ arrives, produce ___, and I approve it before ___."
 
 ## What it reads
-- All five Business DNA files. Cite the file and heading for every rule you use, e.g. `business-rules.md → Always check with a human`. Never paste DNA text into the blueprint.
+- All five Business DNA files. List and read files with the file tools, never a shell command. Cite every rule as "`<file>.md` → <Heading exactly as it appears in that file>", optionally followed by the specific item in brackets, e.g. "`products-services.md` → Our offers (BAS support)". Never cite a bullet or item as if it were a heading. Never paste DNA text into the blueprint.
 - Sample inputs in `sandbox/<name>/` for the simulated run. If there are none, suggest `/sample-data-maker <name>` first. If they'd rather not, use the closest matching items in `sandbox/` (up to five) and say which.
 - If a DNA file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on with `[CHECK: …]` placeholders.
 
@@ -33,13 +33,13 @@ It's designed to run in **Plan mode**. If you're not in Plan mode, say once: "Th
    - **Trigger**
    - **Inputs**
    - **Steps:** numbered, **six or fewer**, each with *Does / Reads / Produces*
-   - **Business rules applied:** each rule cites the DNA file and heading
+   - **Business rules applied:** each rule cites "`<file>.md` → <Heading>", plus the item in brackets if useful
    - **Approval points:** every step that leaves the business, changes money or commits to a date, referenced by step number
    - **Output:** the format, plus a filled example
    - **Success criteria:** 3–5 checkable items (a number, a yes/no, or a time)
    - **Out of scope**
    - **Failure handling:** missing information, unclear input, out-of-scope input
-5. **Present it as the plan.** The owner edits it (Ctrl+G or the plan pane) and approves it. Show their edits back in one line ("You changed: …"). Then write `blueprint.md` as v1.0.
+5. **Self-check, then present it as the plan.** Before showing or writing, open each cited DNA file and confirm every cited heading exists in it word for word. Fix any that don't (a bullet or item goes in brackets after its real heading). Then the owner edits it (Ctrl+G or the plan pane) and approves it. Show their edits back in one line ("You changed: …"). Then write `blueprint.md` as v1.0.
 6. **Simulated run.** For each sample, walk every step in words: what it reads, what it produces, and where it stalls. Flag the messy sample and anything that would hit an approval point or a "Never" rule. **Build nothing and write no outputs except the log.**
 7. **Fix the gaps.** List each gap with a proposed fix. The owner accepts or rejects each one, one at a time. Apply the accepted fixes to the blueprint, bump the version line, and record each fix in the log. Then show a 3-line summary and both file paths.
 
@@ -65,7 +65,7 @@ Scope sentence: When ___ arrives, produce ___, and I approve it before ___.
    - Reads: …
    - Produces: …
 ## Business rules applied
-- <rule in plain words> (`business-rules.md → Never say`)
+- <rule in plain words> (`business-rules.md` → Never say (arrival times))
 ## Approval points
 - Before step <n> (<what leaves the business>): <role> approves.
 ## Output

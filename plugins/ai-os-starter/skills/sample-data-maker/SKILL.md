@@ -12,6 +12,7 @@ Make five realistic but **fictional** inputs for the owner's workflow, so they c
 - No argument: use the newest blueprint in `workflows/`, and say which one in one line.
 - No blueprint yet: a plain description of the input works ("customer emails asking to move a booking"). Ask for a short kebab-case name for the folder, with a suggested default.
 - Optional: one real example in `inbox/`, used for **shape only** (length, layout, the kind of details people include).
+- List and read files with the file tools, never a shell command.
 
 ## What it reads
 - `business-dna/ideal-customers.md` → "Best customers", "Their problems in their words", "Red flags in an enquiry": so the samples sound like this business's customers.
@@ -26,13 +27,14 @@ Make five realistic but **fictional** inputs for the owner's workflow, so they c
    - **Sample 5, messy:** long or rambling, with mixed requests, wrong or contradicting details, or a request the business doesn't do.
 3. **Write each sample** so it reads like the real thing: the subject line, greeting, the way customers actually write, typos where natural. Use only:
    - invented first and last names, invented businesses and invented street names (real suburbs are fine);
-   - email addresses ending in `@example.com`;
-   - phone numbers in the form `0400 000 xxx` (e.g. `0400 000 317`);
+   - email addresses ending exactly in `@example.com`, with no subdomain: write `quotes.northside@example.com`, never `quotes@northside.example.com`;
+   - phone numbers only in the form `0400 000 xxx` (e.g. `0400 000 317`);
    - dates near the workshop, written the way the business writes them.
    No real business names other than the owner's own. No bank, card, ABN, Medicare or account numbers, ever.
 4. **If you used an `inbox/` example,** check every sample: none of its names, emails, phone numbers, addresses or business names may appear. Take the structure, never the people.
-5. **Write the README** with one line per sample: its type (typical, edge case or messy) and what it tests. Exactly one sample is marked messy and exactly one is marked edge case.
-6. **Show the person** the five one-line descriptions and the folder path, and suggest the next step: "Now run the simulated run in `/workflow-blueprint`."
+5. **Self-check before writing:** every email address ends exactly in `@example.com` (nothing between `@` and `example.com`), and every phone number is `0400 000` plus three digits. Fix any that don't, then write.
+6. **Write the README** with one line per sample: its type (typical, edge case or messy) and what it tests. Exactly one sample is marked messy and exactly one is marked edge case.
+7. **Show the person** the five one-line descriptions and the folder path, and suggest the next step: "Now run the simulated run in `/workflow-blueprint`."
 
 ## Approval points
 - **Stop and ask before writing:** the one-line format confirmation in step 1. Default is yes.
@@ -67,7 +69,7 @@ Fictional test inputs for <workflow>. All names, emails and phone numbers are in
 ## Never
 - Copy real personal details from an `inbox/` example. Take the structure, never the people.
 - Use real business names other than the owner's own, or real people's names you recognise.
-- Use an email outside `example.com`, or a phone number outside the `0400 000` range.
+- Use an email that doesn't end exactly in `@example.com` (no subdomains), or a phone number outside `0400 000 xxx`.
 - Include bank, card, tax file, ABN or Medicare numbers, passwords or health details.
 - Write outside `sandbox/<workflow-name>/`, or change the blueprint.
 - Send, post or contact anyone.

@@ -69,7 +69,9 @@ Hi there, need a quote for a new hot water system please, ours is pretty old now
 Hello, my neighbour recommended you, she said you did her place in Bundoora last year (or was it the year before). Anyway our hot water system is making a ticking noise and there's a funny gas smell near it some mornings, not sure if that's normal. We were going to replace it anyway before Christmas, it's an electric one I think, or maybe gas, my husband would know. Also the kitchen tap drips all night. Can you give us a price for everything and come Saturday? We're in Bundorra (sorry, Bundoora).
 Bev
 
-(Samples 2 and 3 follow the same layout.)
+(Samples 2 and 3 follow the same layout. Sample 3's agency writes from `pm.rivergum@example.com`, not `pm@rivergum.example.com`.)
+
+**Self-check before writing:** 4 email addresses, all ending exactly in `@example.com`; 3 phone numbers, all `0400 000 xxx`. Pass.
 
 ## What the person saw
 "Five samples saved in `sandbox/hot-water-quote-reply/`: three typical (gas, electric to continuous flow, rental agency), one edge case (no suburb or system type) and one messy (mixed requests and a gas smell). Next: run the simulated run in `/workflow-blueprint`."

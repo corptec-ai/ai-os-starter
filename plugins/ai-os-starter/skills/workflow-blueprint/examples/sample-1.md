@@ -21,7 +21,15 @@ Proposed `hot-water-quote-reply`. Owner pressed Return.
 6. **How will you know it worked?** "Draft ready in 10 minutes; Office Coordinator only tweaks it."
 
 ## The plan (approved in Plan mode)
-The draft had the nine headings and six steps: read the request · check fit and safety · match the offer and price range · list what we still need · draft the reply · check and hand over for approval. The owner edited one line in the plan pane. Shown back as: "You changed: success criterion 4 from 'under 5 minutes of edits' to 'under 2 minutes'." Saved `workflows/hot-water-quote-reply/blueprint.md` as v1.0.
+The draft had the nine headings and six steps: read the request · check fit and safety · match the offer and price range · list what we still need · draft the reply · check and hand over for approval. The owner edited one line in the plan pane. Shown back as: "You changed: success criterion 4 from 'under 5 minutes of edits' to 'under 2 minutes'." Before saving, every citation was checked against the workspace DNA: each cited heading exists word for word. Saved `workflows/hot-water-quote-reply/blueprint.md` as v1.0.
+
+Business rules applied (extract):
+- Hot water replacement includes removing the old unit; electrical upgrades are extra (`products-services.md` → Our offers (Hot water replacement))
+- Only the stated range, including GST (`pricing-positioning.md` → Rates or ranges we're happy to state)
+- Gas safety goes to a licensed gasfitter (`business-rules.md` → Always check with a human (gas safety))
+- No unconfirmed arrival times (`business-rules.md` → Never say)
+
+Not `products-services.md` → Hot water replacement: that's an item under "Our offers", not a heading.
 
 ## Simulated run (from `sandbox/hot-water-quote-reply/`, 5 samples)
 

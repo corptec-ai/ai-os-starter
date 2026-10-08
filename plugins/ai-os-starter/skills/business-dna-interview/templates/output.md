@@ -129,7 +129,10 @@ Business: <name> · Brand covered: <brand> · Files written: <n> of 5
 | pricing-positioning.md | Rates or ranges we're happy to state | inbox/<file>; contradiction settled by owner (Q<n>) |
 | … | … | … |
 
-## Questions asked (<n> in total)
+## Questions asked
+Questions asked: <n>
+<!-- n counts every question put to the owner, including the website and brand questions. A merged follow-up counts as its own question. Keep this exact line. -->
+
 | # | File | Question | Answer used |
 |---|---|---|---|
 | 1 | brand-voice.md | <question> | <answer, or "suggested answer accepted"> |

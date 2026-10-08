@@ -26,6 +26,7 @@ Fictional test inputs for <one-line description of the workflow>. All names, bus
 # Sample <n> — <type>: <one-line description>
 
 **From:** <Invented Name> <<first.last>@example.com>
+<!-- Every email ends exactly in @example.com, no subdomain (quotes.northside@example.com, not quotes@northside.example.com). Phones only 0400 000 xxx. -->
 **Phone:** 0400 000 <xxx>
 **Received:** <Day DD/MM/YYYY, time>
 **Subject:** <subject>

@@ -15,7 +15,7 @@ Scope sentence: When <trigger> arrives, produce <one output>, and <role> approve
 ## Steps
 1. **<Step name>**
    - Does: <what happens>
-   - Reads: <the input or DNA file → heading>
+   - Reads: <the input, or `<dna-file>.md` → <Heading>>
    - Produces: <what comes out>
 2. **<Step name>**
    - Does: …
@@ -24,8 +24,9 @@ Scope sentence: When <trigger> arrives, produce <one output>, and <role> approve
 <!-- Six steps or fewer. The last step saves a draft to outputs/<name>/ for a person to approve. -->
 
 ## Business rules applied
-- <Rule in plain words> (`<dna-file>.md → <Heading>`)
-- <Rule in plain words> (`<dna-file>.md → <Heading>`)
+- <Rule in plain words> (`<dna-file>.md` → <Heading exactly as in that file>)
+- <Rule in plain words> (`<dna-file>.md` → <Heading> (<specific item, optional>))
+<!-- The heading must exist word for word in the workspace's DNA file. Never cite a bullet or item as if it were a heading: put it in brackets after its real heading. -->
 
 ## Approval points
 - **Before the <output> from step <n> is sent to the customer:** <role> checks it, fixes any `[CHECK]`, and sends it. The workflow never sends.

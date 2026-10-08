@@ -14,7 +14,7 @@ Turn an approved workflow blueprint into a working skill the owner can run as `/
 - If there's no blueprint at all, say: "There's no blueprint yet. Run `/workflow-blueprint` first." Then stop.
 
 ## What it reads
-- The blueprint and simulation log above.
+- The blueprint and simulation log above. List and read files with the file tools, never a shell command.
 - `business-dna/`, only to check that the files and headings the blueprint cites exist. **The new skill points to DNA by file and heading; it never copies DNA text.** That way, updating the DNA updates every skill.
 - If a cited DNA file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on. The rule stays in the skill as a reference.
 
@@ -26,11 +26,12 @@ Turn an approved workflow blueprint into a working skill the owner can run as `/
    - **Purpose:** two lines, ending "Drafts only. Nothing is sent."
    - **Input:** from the blueprint's Inputs, plus what to ask if nothing is given.
    - **Steps:** numbered, **one per blueprint step**, in the same order, each saying what it does, reads and produces.
-   - **Rules:** each rule as `business-dna/<file>.md` → "<heading>". Never paste the DNA wording.
-   - **Approval points:** every blueprint approval point becomes an explicit **"Stop and ask: …"** line, at the step where it happens. Keep every one.
+   - **Rules:** each rule as "`<file>.md` → <Heading exactly as it appears in that file>", optionally with the item in brackets, e.g. "`products-services.md` → Our offers (BAS support)". Never cite a bullet or item as if it were a heading. Never paste the DNA wording.
+   - **Approval points:** each blueprint approval point becomes its own explicit **"Stop and ask: …"** line in the Approval points section, one to one, saying at which step it happens. Don't merge, split or drop any, and don't write "Stop and ask" anywhere else.
    - **Output:** `outputs/<name>/YYYY-MM-DD-<short-slug>.md`, never overwrite (add `-2`), ending with the Check before you use box.
-   - **Never:** the shared list (send, post, delete, pay or contact anyone; make up facts; give legal, tax, financial, medical or HR-law advice; copy personal details it doesn't need; ask for passwords or card numbers) plus the blueprint's Out of scope and "must never" items.
+   - **Never:** the shared list (send, post, delete, pay or contact anyone; make up facts; give legal, tax, financial, medical or HR-law advice; copy personal details it doesn't need; ask for passwords or card numbers) plus the blueprint's Out of scope and "must never" items, in the skill's own words. For the DNA's own rules, point to them, e.g. "Anything in `business-rules.md` → Never say". Never copy a DNA sentence into this list.
    - **When something's wrong:** from the blueprint's Failure handling (missing information, unclear input, out-of-scope input).
+   - **Self-check before saving:** count the blueprint's approval points and the skill's "Stop and ask" lines; they must match. Every cited heading exists word for word in its DNA file. No sentence is copied from the DNA, including in the Never list. Fix anything that fails.
 4. **Write `templates/output.md`** from the blueprint's filled example, and **`examples/sample-1.md`** with one worked input and output from the simulation log (or from the first sandbox sample if the log has none).
 5. **Show it for approval.** Saving into `.claude/` opens the diff view. Explain each section in one plain line, for example "Steps: the five things it does, in the order you designed." Then **wait for the owner to accept** in the diff view. If they reject or ask for a change, make it and show it again.
 6. **First run.** Ask: "Try `/<name>` now on one sandbox sample? (Return = yes, using `<sandbox file>`)". The default sample is `sandbox/<name>/sample-1.md` when it exists; otherwise the first matching sample in `sandbox/`. Suggest Ask-permissions mode so every file it writes is shown first. If `/<name>` doesn't show yet, follow the new SKILL.md directly for this run. Afterwards, check the output against each of the blueprint's Success criteria and show **pass** or **miss** for each, plus whether the Check before you use box is there.
@@ -65,7 +66,7 @@ Turn an approved workflow blueprint into a working skill the owner can run as `/
 ```
 
 ## Never
-- Copy DNA content into the skill. Reference the file and heading only.
+- Copy DNA content into the skill, including its Never list. Reference the file and heading only.
 - Add tools or permissions, or ask to edit `.claude/settings.json`. If the workflow needs a connected tool, write "uses <tool> once connected in Session 6" and fall back to reading files from `inbox/`.
 - Remove or weaken an approval point from the blueprint, even to make a run pass.
 - Write anywhere except `.claude/skills/<name>/` and `workflows/<name>/`. (The first run's draft in `outputs/<name>/` is written by the new skill, not by the skill builder.)

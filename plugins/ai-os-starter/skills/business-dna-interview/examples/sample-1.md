@@ -31,9 +31,13 @@ Here's my draft:
 
 **Owner:** *(Return)*
 
-**AI (question 4):** When is a discount allowed, and who approves it? (Return for "no discounts without the Operations Manager's approval")
+**AI (question 4):** When is a discount allowed? (Return for "no discounts without approval")
 
-**Owner:** 10% for pensioners on residential jobs. Anything else, the Operations Manager.
+**Owner:** 10% for pensioners on residential jobs.
+
+**AI (question 5):** Who approves any other discount? (Return for the Operations Manager)
+
+**Owner:** *(Return)*
 
 **AI:** Here's the summary for `pricing-positioning.md`:
 - Labour $165/hr inc GST (confirmed 2026-11-11; the $180 in two quotes was an error)
@@ -79,15 +83,18 @@ Business: Northside Plumbing & Gas · Brand covered: Northside Plumbing & Gas ·
 | pricing-positioning.md | Rates or ranges we're happy to state | inbox/price-list-2025.pdf; owner's answer (Q1) |
 | pricing-positioning.md | Minimums, deposits and payment terms | inbox/quote-hot-water-preston.docx; inbox/emails-sample.txt (Q2) |
 | pricing-positioning.md | Where we sit against competitors | inbox/website-services.txt (Q3) |
-| pricing-positioning.md | Discount rules | owner's answer (Q4) |
+| pricing-positioning.md | Discount rules | owner's answer (Q4, Q5) |
 
-## Questions asked (4 in total)
+## Questions asked
+Questions asked: 5
+
 | # | File | Question | Answer used |
 |---|---|---|---|
 | 1 | pricing-positioning.md | $165 or $180 labour? | $165; quotes were an error |
 | 2 | pricing-positioning.md | Payment terms? | 14 days (suggested answer accepted) |
 | 3 | pricing-positioning.md | Position against competitors? | Mid-market, top on reliability (suggested answer accepted) |
-| 4 | pricing-positioning.md | Discount rules? | 10% pensioners; others need the Operations Manager |
+| 4 | pricing-positioning.md | When is a discount allowed? | 10% for pensioners on residential jobs |
+| 5 | pricing-positioning.md | Who approves other discounts? | Operations Manager (suggested answer accepted) |
 
 ## Still to fill
 - None in this file.

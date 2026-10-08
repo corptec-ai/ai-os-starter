@@ -8,7 +8,7 @@ description: Interviews the business owner and drafts or updates their Business 
 Turn what the owner already has (the materials in `inbox/` plus their answers) into the five Business DNA files, in about 40 minutes, without the owner facing a blank page. **Draft first, ask second.** The AI drafts every heading from their materials, then asks only about the gaps.
 
 ## Input
-- `inbox/`, read in full: website copy, price lists, quotes, proposals, emails, brand guides, procedures. PDF, Word and pasted text all count. Ignore `inbox/README.md`.
+- `inbox/`, read in full: website copy, price lists, quotes, proposals, emails, brand guides, procedures. PDF, Word and pasted text all count. Ignore `inbox/README.md`. List and read files with the file tools, never a shell command.
 - Word files: ask the owner to save as PDF or paste the text (reading .docx needs a permission prompt).
 - Optionally, one DNA file named in `$ARGUMENTS` to redo just that one: `brand-voice` (or "voice"), `ideal-customers` ("customers"), `products-services` ("products", "services"), `pricing-positioning` ("pricing"), `business-rules` ("rules"). With no argument, do all five in order.
 - The existing `business-dna/*.md`. On a re-run, **update rather than restart**: keep what's filled, work on the `[[FILL]]` headings and anything the new materials change.
@@ -41,7 +41,7 @@ Turn what the owner already has (the materials in `inbox/` plus their answers) i
    - **Never invent compliance obligations.** "Legal and compliance notes" holds only what the owner states or their own materials say; otherwise `[[FILL]]`.
    - **Regulated industry:** add "Always check with a human: anything that could be advice", and tell them you've added it.
 7. **Write each file only after a "yes".** Show a summary (what's filled, what's still `[[FILL]]`), then ask "Write <file>? (yes / change something)". Keep each file under about 80 lines.
-8. **Write the sources log**: for every section, which inbox file (or "owner's answer") each fact came from.
+8. **Write the sources log**: for every section, which inbox file (or "owner's answer") each fact came from. It must contain the exact line `Questions asked: <n>`, where n counts every question put to the owner, including the website and brand questions. A merged follow-up ("and who approves it?") counts as its own question.
 9. **Close with a summary:** what's filled, what's still `[[FILL]]`, the sources log path, then: "Type `/context` to see these load."
 
 ## Approval points
@@ -64,7 +64,8 @@ On screen: the closing summary. In files: the five DNA files and the sources log
 ```
 # Business DNA sources — <date>
 | File | Section | Came from |
-## Questions asked (<n>)
+## Questions asked
+Questions asked: <n>
 ## Check before you use
 - **[CHECK] items:** each `[CHECK: …]` left in the DNA
 - **Assumptions:** e.g. "newest price list treated as current"
