@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 (workshop kit)
+- Nine workshop guides: workspace-check (full), business-dna-interview, dna-check, opportunity-mapper, workflow-blueprint, sample-data-maker, skill-builder, test-pack, go-live-runbook.
+- Workspace template: use file tools only (no shell commands, no surprise permission prompts); example blueprint in the sandbox.
+- Opportunity mapper shows Eliminate tasks scored with the reason; skill builder references Business DNA (text, prices, thresholds) instead of copying it and maps every approval point to a stop-and-ask; interview handles a business that isn't trading yet.
+- Tested on three fictional businesses: library 33/33; guides chain Sessions 2–8 passing.
+
 ## 0.2.1 (tested)
 - All ten workflows pass the kit test suite on three sample businesses (trades, services, hospitality).
 - enquiry-triage: a red flag overrides the grade and sits in its own section.

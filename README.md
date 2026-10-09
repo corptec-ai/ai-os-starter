@@ -30,6 +30,8 @@ Then install **ai-os-starter**. Or, in Claude Code:
 
 ## What's inside
 
+### Ready-made workflows
+
 | Workflow | What it does |
 |---|---|
 | `/workspace-check` | Green, amber or red health check of your workspace |
@@ -44,7 +46,21 @@ Then install **ai-os-starter**. Or, in Claude Code:
 | `/job-ad-writer` | Job ad and screening questions in your voice |
 | `/invoice-follow-up` | Overdue-invoice reminders in the right tone |
 
-*Library draft 0.2.0. The workshop guide workflows arrive before the workshop on 11–12 November 2026.*
+### Workshop guides (Sessions 1–8)
+
+| Guide | What it does |
+|---|---|
+| `/workspace-check` | Green, amber or red health check of your workspace |
+| `/business-dna-interview` | Turns your materials and answers into your five Business DNA files |
+| `/dna-check` | Scores a draft against your Business DNA and says what to fix |
+| `/opportunity-mapper` | Maps your recurring work and helps you pick your first workflow |
+| `/workflow-blueprint` | Designs the workflow step by step and simulates it on sample data |
+| `/sample-data-maker` | Makes safe, fictional sample inputs to test with |
+| `/skill-builder` | Turns your blueprint into your own working workflow |
+| `/test-pack` | Tests your workflow on normal and unusual cases |
+| `/go-live-runbook` | Writes the one-page runbook: owner, checks, how to switch it off |
+
+*Version 0.3.0: the full workshop kit.*
 
 ## Updates
 
