@@ -47,7 +47,10 @@ Write `outputs/meeting-to-actions/YYYY-MM-DD-<short-topic>.md`. Never overwrite:
 Subject: …
 ## Flagged, not included
 ## Check before you use
-- [CHECK] items, assumptions, anything a person must decide
+- **[CHECK] items:** each placeholder
+- **Assumptions:** e.g. attendees or date taken from the notes
+- **Needs a human decision:** flagged rules, owners shown as `?`
+- Nothing has been sent.
 ```
 
 ## Never

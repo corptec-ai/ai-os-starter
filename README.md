@@ -34,8 +34,17 @@ Then install **ai-os-starter**. Or, in Claude Code:
 |---|---|
 | `/workspace-check` | Green, amber or red health check of your workspace |
 | `/meeting-to-actions` | Meeting notes into decisions, actions and a follow-up email draft |
+| `/email-reply-drafter` | Replies to customer emails in your voice; flags anything a person must handle |
+| `/enquiry-triage` | Sorts new enquiries by fit and suggests the next step |
+| `/proposal-drafter` | Quote or proposal from a brief, using your offers and pricing |
+| `/social-post-writer` | Three on-brand post options from one idea |
+| `/weekly-business-brief` | One-page week ahead from your calendar and email |
+| `/sop-writer` | Rough notes into a step-by-step procedure |
+| `/review-responder` | Replies to online reviews, calm and careful |
+| `/job-ad-writer` | Job ad and screening questions in your voice |
+| `/invoice-follow-up` | Overdue-invoice reminders in the right tone |
 
-*Test kit v0. The full library (nineteen workflows) arrives before the workshop on 11–12 November 2026.*
+*Library draft 0.2.0. The workshop guide workflows arrive before the workshop on 11–12 November 2026.*
 
 ## Updates
 

@@ -18,4 +18,5 @@ Everything you produce must follow these files. If one still says `[[FILL]]`, sa
 - Don't give legal, tax, financial, medical or HR-law advice. Draft the wording and add "Have your adviser check this."
 - Put every output in `outputs/<workflow-name>/YYYY-MM-DD-<short-name>.md`, and never overwrite an existing file.
 - End every output with a **Check before you use** box: each `[CHECK: …]` item, the assumptions you made, and anything a person needs to decide.
+- To find, list or read files, use the file tools (read, list, search). Never run shell commands: they trigger a permission prompt and aren't needed for anything in this workspace.
 - `sandbox/` holds safe sample data. Use it until the owner chooses to work with real material.

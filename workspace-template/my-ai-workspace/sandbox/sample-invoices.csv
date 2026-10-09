@@ -1,0 +1,11 @@
+customer,invoice_number,amount_inc_gst,issue_date,due_date,contact_email,notes
+Hartwell Property Group,NPG-10412,594.00,2026-10-21,2026-11-04,accounts@example.com,Rental leak repair - call-out plus 2 hrs labour and parts
+Bianca Moretti,NPG-10377,3190.00,2026-09-30,2026-10-14,bianca.moretti@example.com,Continuous flow hot water install. Part payment of $1500.00 received 2026-10-20; balance $1690.00 outstanding
+Lantern Lane Dumplings,NPG-10341,4620.00,2026-09-07,2026-09-21,lanternlane@example.com,Grease trap install. DISPUTED - customer says the $880.00 extra pipework variation was not approved in writing
+Greg Pappas,NPG-10298,2365.00,2026-08-19,2026-09-02,greg.pappas@example.com,Gas storage hot water replacement - two reminder calls made in September
+Sunita Rao,NPG-10466,1276.00,2026-11-02,,sunita.rao@example.com,Leak detection and repair under laundry slab. Due date missing from export
+Kestrel Property Management,NPG-10471,418.00,2026-11-05,2026-11-19,imogen.hartley@example.com,Priority call-out - blocked kitchen drain at managed rental
+Tom Albrecht,NPG-10488,2090.00,2026-11-09,2026-11-23,tom.albrecht@example.com,Electric storage hot water replacement
+Saltbush Kitchen,NPG-10479,6215.00,2026-11-06,2026-11-20,nathan@example.com,Commercial gas line and fittings - stage 1
+Joan Whitfield,NPG-10492,312.00,2026-11-10,2026-11-24,joan.whitfield@example.com,Leaking tap and toilet cistern repair - pensioner discount applied
+Harlow & Finch Realty,NPG-10455,726.00,2026-10-29,2026-11-12,maintenance@example.com,Hot water thermostat and tempering valve replacement at managed rental
