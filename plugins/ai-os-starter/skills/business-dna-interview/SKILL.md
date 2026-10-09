@@ -83,6 +83,7 @@ Questions asked: <n>
 - Send, post or contact anyone. Ask for or store passwords, API keys or card numbers.
 
 ## Edge cases
+- **Not trading yet (planning a business):** there are no materials and no customers yet. Draft every file from the owner's plans instead, mark each planned fact `[CHECK: plan]` (planned prices, offers, target customers), and keep business rules to what they intend. Suggest re-running the interview once they've had their first customers.
 - **Materials contradict each other:** ask, then record the answer and its date.
 - **Multi-brand business:** ask which brand. One workspace, one brand.
 - **The owner wants to write a file themselves:** let them, then offer to tidy it to the headings.
