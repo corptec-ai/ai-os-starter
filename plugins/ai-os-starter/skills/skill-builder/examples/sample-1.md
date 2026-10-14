@@ -59,7 +59,7 @@ Read these headings in your Business DNA and follow them. Don't copy them here; 
 ```
 
 ## First run
-Default sample accepted: `/hot-water-quote-reply sandbox/hot-water-quote-reply/sample-1.md` (gas storage, Preston, photos attached), in Ask-permissions mode. The new skill wrote its draft to `outputs/hot-water-quote-reply/2026-11-12-preston-<first-name>.md`.
+Default sample accepted: `/hot-water-quote-reply sandbox/hot-water-quote-reply/sample-1.md` (gas storage, Preston, photos attached), in Manual mode. The new skill wrote its draft to `outputs/hot-water-quote-reply/2026-11-12-preston-<first-name>.md`.
 
 | Success criterion | Result | Note |
 |---|---|---|
