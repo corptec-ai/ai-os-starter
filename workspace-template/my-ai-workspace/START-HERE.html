@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en-AU">
+<meta charset="utf-8">
+<title>Your Kit Almanac</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+<style>
+/* Layout: "Explain your kit". The ten ready-made workflows arranged by business rhythm (every day, every week, when it comes up), each a card that opens full-screen with what it does, when to use it, a try-it-now command on sandbox data, what it reads, where it stops for you, and ideas for your own. Then the build loop: the nine guides as the bouncing ball for workflow number two. Single dark look (Corptec gradient) because it is shown on the projector and opened on attendees' laptops. */
+:root{
+  --bg:#0B0420; --panel:#160A33; --line:rgba(255,255,255,.14); --ink:#F4F1F3; --muted:#C7B8DA; --dim:rgba(244,241,243,.6);
+  --lav:#B46DFF; --mauve:#D4AFF9; --blush:#DF6F8E; --gold:#F2C46B; --ok:#7FD1A6;
+  --f-head:Georgia,"STIXGeneral","Times New Roman",serif;
+  --f-body:Arial,"Helvetica Neue",Helvetica,sans-serif;
+  --f-label:"Poppins",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body)}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;background:rgba(255,255,255,.12);padding:.05em .35em;border-radius:4px;font-size:.9em;white-space:nowrap}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
+.label{font-family:var(--f-label);font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mauve)}
+header h1{font-family:var(--f-head);font-size:clamp(28px,4vw,44px);margin:.2em 0 .25em;text-wrap:balance}
+header p{color:var(--muted);max-width:74ch;margin:0 0 8px;line-height:1.5}
+.keys{font-size:13px;color:var(--dim);margin-top:8px}
+.keys kbd{font-family:var(--f-label);font-size:11px;border:1px solid var(--line);border-radius:4px;padding:1px 6px;color:var(--ink)}
+.rules{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.rules span{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--muted)}
+.rules b{color:var(--ink)}
+h2.sec{font-family:var(--f-label);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--lav);margin:34px 0 4px;font-weight:500}
+p.secnote{color:var(--dim);font-size:14px;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;color:inherit;text-align:left;font:inherit;display:grid;gap:6px;min-width:0}
+.tile:hover,.tile:focus-visible{border-color:var(--lav);outline:none}
+.tile .n{font-family:var(--f-label);font-size:12px;color:var(--mauve)}
+.tile .t{font-family:var(--f-head);font-size:19px;line-height:1.2}
+.tile .cmd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:var(--gold)}
+.tile .d{font-size:14px;color:var(--muted);line-height:1.4}
+.loop{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;counter-reset:l}
+.loop div{counter-increment:l;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}
+.loop div::before{content:counter(l);font-family:var(--f-label);font-size:12px;color:#010054;background:var(--lav);border-radius:50%;width:1.7em;height:1.7em;display:inline-grid;place-items:center;margin-bottom:6px}
+.loop b{display:block;font-family:var(--f-head);font-size:16px;margin-bottom:2px}
+.loop code{font-size:12px}
+.loop p{margin:4px 0 0;font-size:13px;color:var(--muted);line-height:1.4}
+.also{margin-top:12px;font-size:14px;color:var(--muted)}
+#view{position:fixed;inset:0;z-index:20;background:linear-gradient(120deg,#010054 0%,#24004a 50%,#640466 100%);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 3vh) 5vw calc(env(safe-area-inset-bottom,0px) + 2.5vh);overflow:auto}
+#view .top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--f-label);letter-spacing:1.5px;text-transform:uppercase;font-size:clamp(11px,1.1vw,14px);color:var(--mauve)}
+#view .body{flex:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:3.5vw;align-items:start;margin-top:2vh}
+@media (max-width:860px){#view .body{grid-template-columns:1fr}}
+#view h1{font-family:var(--f-head);font-size:clamp(28px,4vw,58px);line-height:1.06;margin:0 0 .2em;text-wrap:balance}
+#view .cmd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:clamp(14px,1.4vw,20px);color:var(--gold);margin:0 0 .8em}
+#view .what{font-family:var(--f-head);font-size:clamp(18px,1.9vw,28px);color:#ECE1F5;line-height:1.3;margin:0 0 1em;text-wrap:balance}
+#view .blk{margin-bottom:1.6vh}
+#view .blk h3{font-family:var(--f-label);font-weight:500;font-size:clamp(11px,1vw,13px);letter-spacing:1.5px;text-transform:uppercase;color:var(--lav);margin:0 0 .35em}
+#view .blk p,#view .blk li{font-size:clamp(14px,1.3vw,19px);line-height:1.4;color:#ECE1F5;margin:0}
+#view .blk ul{margin:0;padding-left:1.1em;display:grid;gap:.25em}
+#view .try{background:rgba(242,196,107,.12);border:1px solid rgba(242,196,107,.45);border-radius:12px;padding:12px 16px}
+#view .try h3{color:var(--gold)}
+#view .ideas{background:rgba(180,109,255,.14);border:1px solid rgba(180,109,255,.45);border-radius:12px;padding:12px 16px}
+#view .never li{color:#F3D6DF}
+#view .bot{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;margin-top:1.5vh}
+#view .bot button{font-family:var(--f-label);font-size:13px;background:rgba(255,255,255,.1);color:var(--ink);border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:8px 12px;cursor:pointer}
+#view .bot button:hover{background:rgba(255,255,255,.18)}
+button:focus-visible{outline:2px solid var(--lav);outline-offset:2px}
+.tabs{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.tabs .in{max-width:1200px;margin:0 auto;padding:10px 16px;display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{font-family:var(--f-label);font-size:13px;background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--lav);border-color:var(--lav);color:#010054;font-weight:600}
+.go2{font-family:var(--f-label);font-size:14px;background:linear-gradient(90deg,#975DCA,#DF6F8E);color:#fff;border:0;border-radius:10px;padding:10px 18px;cursor:pointer;margin-top:6px}
+.steps{display:grid;gap:12px;counter-reset:st}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:3.2em minmax(0,1fr);gap:4px 16px}
+.step .no{grid-row:1/span 3;font-family:var(--f-label);font-weight:600;font-size:20px;color:#010054;background:var(--lav);border-radius:50%;width:2em;height:2em;display:grid;place-items:center}
+.step .no.z{background:var(--gold)}
+.step h3{font-family:var(--f-head);font-size:22px;margin:0;line-height:1.2}
+.step h3 small{font-family:var(--f-label);font-size:12px;color:var(--dim);font-weight:400;letter-spacing:1px;margin-left:8px;text-transform:uppercase}
+.step .why{color:var(--muted);margin:2px 0 8px;font-size:15px;line-height:1.45}
+.step .cols{grid-column:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.step .cols div{background:rgba(255,255,255,.04);border-radius:10px;padding:10px 12px;min-width:0}
+.step .cols h4{font-family:var(--f-label);font-weight:500;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--lav);margin:0 0 4px}
+.step .cols div.t h4{color:var(--gold)}
+.step .cols div.w h4{color:var(--blush)}
+.step .cols p,.step .cols li{margin:0;font-size:14px;line-height:1.45;color:#ECE1F5}
+.step .cols ul{margin:0;padding-left:1.1em}
+.step .cols code{white-space:normal;overflow-wrap:anywhere}
+.side{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:8px}
+.side div{border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.side h3{font-family:var(--f-head);font-size:18px;margin:0 0 6px}
+.side ul{margin:0;padding-left:1.1em;font-size:14px;line-height:1.5;color:var(--muted)}
+@media print{@page{margin:14mm}:root{--bg:#fff;--panel:#fff;--ink:#140B2E;--muted:#3D3550;--dim:#5E5470;--line:#D9CDE6;--lav:#7F3183;--mauve:#7F3183}.tabs,.keys,.go2{display:none}body{background:#fff;color:#140B2E}#index{display:none!important}#build{display:block!important}.step,.side div{break-inside:avoid;border-color:#D9CDE6}.step .cols{grid-template-columns:repeat(3,minmax(0,1fr))}.step .cols div{background:#F6F2F8}.step .cols p,.step .cols li{color:#140B2E}.step .cols div.t h4{color:#8A5A00}.step .cols div.w h4{color:#A3324F}.step .no{color:#fff;background:#7F3183}.step .no.z{background:#C08A1E}code{background:#EFE8F4;color:#140B2E}.rules span{color:#3D3550}.side ul{color:#3D3550}header h1,.step h3,.side h3{color:#010054}}
+
+</style>
+
+<nav class="tabs" aria-label="Pages"><div class="in"><button data-page="index" aria-selected="true">Your ten workflows</button><button data-page="build" aria-selected="false">Build your next one at home</button></div></nav>
+<div class="wrap" id="index">
+  <header>
+    <div class="label">Corptec · Put AI to Work in Your Business · Explain your kit</div>
+    <h1>Your kit: ten workflows already built for you</h1>
+    <p>You've built one workflow from scratch. These ten came in the box, set up for a typical business and tuned by your Business DNA. Use them as they are, and use them for ideas: each card ends with workflows you could build next, the same way you built your first.</p>
+    <div class="rules"><span><b>Drafts only.</b> Nothing sends, posts or pays</span><span><b>Your facts.</b> Read from your Business DNA, never made up</span><span><b>[CHECK]</b> marks anything you need to confirm</span><span><b>HUMAN FIRST</b> means it stops and hands it to you</span></div>
+    <div class="keys">Click a card to open it · <kbd>←</kbd> <kbd>→</kbd> next or previous · <kbd>F</kbd> full screen · <kbd>Esc</kbd> back</div>
+  </header>
+  <div id="groups"></div>
+  <h2 class="sec">Build your next one</h2>
+  <p class="secnote">The guides you used for your first workflow work for every one after it. The step-by-step process to repeat at home is on the next page.</p>
+  <button class="go2" data-page="build">Build your next one at home →</button>
+</div>
+
+<div class="wrap" id="build" hidden>
+  <header>
+    <div class="label">Corptec · Put AI to Work in Your Business · Your AI OS starter kit</div>
+    <h1>Build your next workflow at home</h1>
+    <p>You've done this once in the room. Here's the same path to build any new workflow on your own: pick it, plan it, test it on made-up examples, build it, try to break it, run it for real, and hand it over. Allow about three hours. It splits neatly into two sittings, after step 3.</p>
+    <div class="rules"><span><b>Same folder:</b> <code>my-ai-workspace</code> in the Code tab</span><span><b>Made-up data first,</b> real data last</span><span><b>Drafts only.</b> You press send</span><span><b>Stuck?</b> Rewind, or ask "what went wrong?"</span></div>
+  </header>
+  <h2 class="sec">The steps</h2>
+  <div class="steps">
+  <div class="step"><span class="no z">0</span><h3>Get set<small>5 min</small></h3><p class="why">Every build starts from a clean desk.</p>
+    <div class="cols"><div class="t"><h4>Do this</h4><ul><li>Open the Claude app → <b>Code</b> tab → your <code>my-ai-workspace</code> folder</li><li>Start a <b>new session</b>, or type <code>/clear</code></li><li>Set the mode to <b>Manual</b> while you build, so it asks before every change</li><li>Run <code>/workspace-check</code></li></ul></div><div><h4>You get</h4><p>A green and amber list. Anything red, fix first: it tells you how.</p></div><div class="w"><h4>Watch for</h4><p>If your prices or services have changed since the workshop, run <code>/business-dna-interview</code> on the file that changed before you build anything new.</p></div></div></div>
+  <div class="step"><span class="no">1</span><h3>Pick it<small>20 min</small></h3><p class="why">Choose the job worth automating next.</p>
+    <div class="cols"><div class="t"><h4>Do this</h4><ul><li>Run <code>/opportunity-mapper</code>, or open <code>workflows/opportunity-map.md</code> and take the next idea on your list</li><li>Or pick an idea from a card on the first page</li><li>Write one sentence: <b>"When X arrives, produce Y, and I approve it."</b></li></ul></div><div><h4>You get</h4><p><code>workflows/opportunity-map-2.md</code> (it never overwrites your first map) and your one-sentence scope.</p></div><div class="w"><h4>Watch for</h4><p>Use your <b>real hours</b>, not the guess it offers. The ranking is only as good as your numbers. Start small: two or three steps, one input, one output.</p></div></div></div>
+  <div class="step"><span class="no">2</span><h3>Plan it<small>30 min</small></h3><p class="why">Design it before anything gets built.</p>
+    <div class="cols"><div class="t"><h4>Do this</h4><ul><li>Switch the mode to <b>Plan</b></li><li>Run <code>/workflow-blueprint</code> followed by your scope sentence</li><li>Answer its questions. Edit the plan until it matches how you really work, then approve it</li></ul></div><div><h4>You get</h4><p><code>workflows/&lt;name&gt;/blueprint.md</code>: the steps, inputs, outputs, rules and the points where it stops for you.</p></div><div class="w"><h4>Watch for</h4><p>Say how the input really reaches you (a phone call, an email, a form), not how it would be tidiest. If it says it works best in Plan mode, switch modes and ask again.</p></div></div></div>
+  <div class="step"><span class="no">3</span><h3>Make test data<small>20 min</small></h3><p class="why">Test on made-up examples before anything real.</p>
+    <div class="cols"><div class="t"><h4>Do this</h4><ul><li>Switch back to <b>Manual</b></li><li>Run <code>/sample-data-maker</code></li><li><b>Open the samples and read them</b></li><li>Then ask: "Walk the blueprint through each sample. Don't build anything yet." Add every gap it finds to the blueprint</li></ul></div><div><h4>You get</h4><p>Five realistic examples in <code>sandbox/&lt;name&gt;/</code>, one deliberately messy, and a better blueprint.</p></div><div class="w"><h4>Watch for</h4><p>This is where the real design happens: missing information, odd formats, sensitive cases. <b>Good place to stop</b> for the day. Next time, start again at step 0.</p></div></div></div>
+  <div class="step"><span class="no">4</span><h3>Build it<small>20 min</small></h3><p class="why">Turn the blueprint into a working workflow.</p>
+    <div class="cols"><div class="t"><h4>Do this</h4><ul><li>Run <code>/skill-builder</code> on your blueprint</li><li>Read the new workflow in the changes view, then accept it</li><li>Run <code>/&lt;name&gt;</code> on one sample. Fix one thing, run it again</li></ul></div><div><h4>You get</h4><p><code>.claude/skills/&lt;name&gt;/SKILL.md</code>: a plain-English file you can read and edit, plus <code>workflows/&lt;name&gt;/build-log.md</code>.</p></div><div class="w"><h4>Watch for</h4><p>Lots of permission prompts? Once you trust what it's doing, switch to <b>Auto</b>. Don't like a change? Rewind it.</p></div></div></div>
+  <div class="step"><span class="no">5</span><h3>Try to break it<small>20 min</small></h3><p class="why">Find the edge cases before your customers do.</p>
+    <div class="cols"><div class="t"><h4>Do this</h4><ul><li>Run <code>/test-pack</code></li><li>Read <code>test-log.md</code>, especially the failures</li><li>Fix each one, run the tests again</li><li>Add one rule: <b>"If this is missing, ask me."</b></li></ul></div><div><h4>You get</h4><p>Eight test cases in <code>workflows/&lt;name&gt;/tests/</code> and a pass or fail log you can show someone.</p></div><div class="w"><h4>Watch for</h4><p>The AI marks its own homework, so <b>read the outputs yourself</b>. A perfect score first time usually means the tests were too easy: ask for harder ones.</p></div></div></div>
+  <div class="step"><span class="no">6</span><h3>Run it for real<small>15 min</small></h3><p class="why">One real item, with you watching every step.</p>
+    <div class="cols"><div class="t"><h4>Do this</h4><ul><li>Pick <b>one</b> real input. Take out anything sensitive you don't need</li><li>If it needs your email or files: <b>+ → Connectors</b>, read only</li><li>Run it, approve each step, and read what it touched</li></ul></div><div><h4>You get</h4><p>One real draft in <code>outputs/</code> or your connected drafts folder. <b>Nothing sent.</b></p></div><div class="w"><h4>Watch for</h4><p>Check the [CHECK] items and the "Check before you use" box every time. If it gets a fact wrong, fix the Business DNA, not just the draft.</p></div></div></div>
+  <div class="step"><span class="no">7</span><h3>Hand it over<small>15 min</small></h3><p class="why">Make it a business system, not a one-off.</p>
+    <div class="cols"><div class="t"><h4>Do this</h4><ul><li>Run <code>/go-live-runbook</code></li><li>Name the owner, the backup, when it runs and the weekly check</li><li>Write down hours a week now, and what you expect</li></ul></div><div><h4>You get</h4><p><code>workflows/&lt;name&gt;/RUNBOOK.md</code>: what it does, who owns it, how to check it, how to switch it off, and a 30-day measure.</p></div><div class="w"><h4>Watch for</h4><p>Put the 30-day check in your calendar now. Hours stay "expected" until you've measured them.</p></div></div></div>
+  </div>
+  <h2 class="sec">After it's live</h2>
+  <div class="side">
+    <div><h3>Keep it healthy</h3><ul><li>Weekly: look at three outputs. Same mistake twice? Fix the source</li><li>Run <code>/dna-check</code> on anything that sounds off-brand</li><li>Prices or services changed: <code>/business-dna-interview</code> on that file</li><li>Something broke: <code>/workspace-check</code></li></ul></div>
+    <div><h3>Keep it safe</h3><ul><li>Drafts only. You press send</li><li><b>Manual</b> while you build; <b>Auto</b> for workflows that have passed their tests; never <b>Bypass permissions</b>. Your safety file applies either way</li><li>Real customer data only once it's tested, and only what it needs</li><li>Your data is processed by Anthropic under your Claude plan, outside Australia. Regulated industries: check with your adviser first</li><li>To switch a workflow off, follow its runbook</li></ul></div>
+    <div><h3>When to call Corptec</h3><ul><li>You want the same workspace for your team</li><li>A job is too big for one workflow and needs several chained together</li><li>You need it connected to more of your systems</li><li>You have more workflows than you can keep track of</li></ul></div>
+  </div>
+  <p class="keys" style="margin-top:20px">Tip: print this page (⌘P) and keep it next to your laptop for the first few builds.</p>
+</div>
+
+<div id="view" hidden role="dialog" aria-label="Workflow card">
+  <div class="top"><span id="v-group"></span><span id="v-pos"></span></div>
+  <div class="body">
+    <div>
+      <h1 id="v-title"></h1>
+      <p class="cmd" id="v-cmd"></p>
+      <p class="what" id="v-what"></p>
+      <div class="blk"><h3>Use it when</h3><p id="v-when"></p></div>
+      <div class="blk"><h3>You get</h3><p id="v-gives"></p></div>
+      <div class="blk"><h3>It reads</h3><p id="v-reads"></p></div>
+    </div>
+    <div>
+      <div class="blk try"><h3>Try it now</h3><p id="v-try"></p><p style="margin-top:.5em;font-size:.85em;color:#F7E7C6">The sample files are for Northside Plumbing &amp; Gas, a made-up business, so the "fit" checks won't match yours. For a truer test, paste one of your own (take out names and personal details) or make samples for your business with <code>/sample-data-maker</code>.</p></div>
+      <div class="blk"><h3>It stops and asks you when</h3><ul id="v-stops"></ul></div>
+      <div class="blk never"><h3>It will never</h3><ul id="v-never"></ul></div>
+      <div class="blk ideas"><h3>Ideas for your own</h3><ul id="v-ideas"></ul></div>
+    </div>
+  </div>
+  <div class="bot"><button id="b-prev">← Previous</button><button id="b-next">Next →</button><button id="b-fs">Full screen</button><button id="b-idx">All workflows</button></div>
+</div>
+
+<script>
+const GROUPS=[
+ ['Every day','The inbox jobs: customers, leads and reviews.'],
+ ['Every week','The rhythm jobs: meetings, the week ahead, money owed and staying visible.'],
+ ['When it comes up','The occasional jobs that take an afternoon by hand.']];
+const W=[
+ {g:0,id:'email-reply-drafter',t:'Reply to customer emails',
+  what:'Drafts replies in your brand voice, using only facts from your Business DNA, and sorts out the ones a person should answer.',
+  when:'Your inbox has a pile of customer questions, bookings, quotes or complaints waiting.',
+  gives:'A draft reply for each email, plus a list of the ones marked HUMAN FIRST (refunds, complaints, legal, pricing exceptions) with a short holding reply.',
+  reads:'All five DNA files: how you sound, your rules, and your products and prices, only to answer what was asked.',
+  tryit:'<code>/email-reply-drafter sandbox/sample-emails.md</code>. After Session 6 you can name emails in your connected inbox instead (read only).',
+  stops:['Before saving any draft into your mailbox, one by one (the default is no)','A complaint, refund, legal threat or pricing exception: it hands it to you'],
+  never:['Send, forward or reply to anyone','Promise a refund, discount, date or price that isn\'t in your DNA','Admit fault in a complaint'],
+  ideas:['Replies to supplier emails','Answers for the questions your website gets every week','An after-hours holding reply that sets expectations']},
+ {g:0,id:'enquiry-triage',t:'Sort new enquiries',
+  what:'Scores each new lead against your ideal customers, flags red flags, and suggests the next step and who should take it.',
+  when:'Web-form leads or enquiry emails have piled up and you need to know which to call first.',
+  gives:'Every enquiry graded A, B, C or ? with the reason in the customer\'s own words, red-flagged ones listed separately, and a next step for each.',
+  reads:'Ideal customers (best customers, who you are not for, red flags), your offers, and who handles what.',
+  tryit:'<code>/enquiry-triage sandbox/sample-enquiries.md</code>',
+  stops:['If you ask it to reply to anyone: it points you to the email reply workflow instead'],
+  never:['Contact, book or decline anyone','Use age, gender or other protected characteristics as a reason','Invent facts about a lead (budget, size, history)'],
+  ideas:['A go or no-go check for tenders and requests for quote','Sorting partnership and sponsorship requests','Spotting which existing customers to call this month']},
+ {g:0,id:'review-responder',t:'Reply to online reviews',
+  what:'Thanks people for good reviews and answers bad ones calmly and constructively, without arguing or admitting liability.',
+  when:'New Google or Facebook reviews need a reply, especially the awkward ones.',
+  gives:'A reply for each review. Negative ones that need a person first are marked HUMAN FIRST with a suggested next step.',
+  reads:'Brand voice, your rules (never say, who to escalate to), and your offers.',
+  tryit:'<code>/review-responder sandbox/sample-reviews.md</code>',
+  stops:['A safety issue, a legal threat, or a staff member named negatively: HUMAN FIRST, and no public reply is drafted'],
+  never:['Post or publish anything','Admit fault, offer compensation or mention a refund publicly','Reveal anything about the customer they didn\'t say first'],
+  ideas:['A private follow-up to an unhappy customer','Asking happy customers for a review or testimonial','A monthly summary of what reviews say about you']},
+ {g:1,id:'meeting-to-actions',t:'Meeting to actions',
+  what:'Turns meeting notes or a transcript into decisions, actions with owners and dates, open questions, risks and a follow-up email.',
+  when:'Straight after a team meeting, client call or site meeting, while it\'s fresh.',
+  gives:'Decisions, an action list with owners and due dates, open questions, risks and a follow-up email draft in your voice.',
+  reads:'Your brand voice for the email. Everything else comes from the notes themselves.',
+  tryit:'<code>/meeting-to-actions sandbox/sample-meeting.md</code> (the one you ran in Session 1). Try a recording transcript from your own phone next.',
+  stops:['Remarks about someone\'s performance, health or private life: kept out of the email and flagged for you'],
+  never:['Send the email or create calendar entries','Invent owners, dates or decisions','Put personal remarks about people in the email'],
+  ideas:['Toolbox talk or pre-start notes into site actions','A board or partners\' meeting into minutes','A client call into a note for your CRM']},
+ {g:1,id:'weekly-business-brief',t:'Brief me on the week',
+  what:'A one-page week ahead from your calendar and email: key meetings, what\'s waiting on you, customers needing attention and risks.',
+  when:'Monday morning, or Sunday night. It can also run on a schedule once it\'s connected.',
+  gives:'One page, under 60 lines: the week in three lines, meetings and prep, what\'s waiting on you, customers to look after, and risks.',
+  reads:'Your connected calendar and email (read only), your response-time promises and your best customers.',
+  tryit:'<code>/weekly-business-brief sandbox/</code> uses the sample calendar and emails. After Session 6, run it with no arguments to read your connected tools.',
+  stops:['Nothing: it only reads. Ask it to reply or move a meeting and it says no'],
+  never:['Reply, accept or decline invites, or move meetings','Show personal or medical appointments in detail','Go over one page'],
+  ideas:['A Monday cash snapshot once your accounting is connected','A month-end checklist','A team huddle agenda from this week\'s jobs']},
+ {g:1,id:'invoice-follow-up',t:'Chase overdue invoices',
+  what:'Drafts payment reminders from your invoice list, choosing a friendly, firm or final tone by how overdue each one is.',
+  when:'Once a week, with an aged receivables export from your accounting system.',
+  gives:'A summary of who owes what, a draft reminder for each invoice in the right tone, and HUMAN FIRST for disputes, key customers and large amounts.',
+  reads:'Your payment terms, brand voice, and rules (thresholds and key customers to handle personally).',
+  tryit:'<code>/invoice-follow-up sandbox/sample-invoices.csv</code>',
+  stops:['Disputed invoices, key customers, or amounts over your "always check" threshold: HUMAN FIRST, no draft'],
+  never:['Send anything or change your accounting system','Threaten collection, interest or late fees unless your DNA says so','Recalculate or change amounts'],
+  ideas:['Following up quotes that haven\'t been answered','Deposit requests before a job starts','A list of supplier bills due this week']},
+ {g:1,id:'social-post-writer',t:'Write a social post',
+  what:'Three post options from one idea, a finished job or some news, each with a different hook, in your brand voice.',
+  when:'You finished a job worth showing off, have a tip to share, or haven\'t posted for a while.',
+  gives:'Three options (a story, a useful tip, problem then solution) for LinkedIn, Facebook or Instagram, with a call to action that points to a real offer.',
+  reads:'Brand voice (including emojis and hashtags), your best customers and their problems, your offers and your rules.',
+  tryit:'<code>/social-post-writer sandbox/sample-post-ideas.md</code>, or just type an idea: <code>/social-post-writer we finished a kitchen reno in Brunswick</code>',
+  stops:['The idea is about an accident, injury, complaint or dispute: it suggests not posting','A customer or staff member is named without permission: it swaps in a neutral description and flags it','Two of your customer groups fit equally: it asks which one'],
+  never:['Post, schedule or publish anything','Make claims your DNA doesn\'t support ("best in Melbourne")','Make up prices, results or testimonials'],
+  ideas:['A monthly email newsletter','A case study from a finished job','A Google Business Profile update']},
+ {g:2,id:'proposal-drafter',t:'Draft a quote or proposal',
+  what:'Turns a customer brief into a quote using your own offers, inclusions, exclusions, pricing basis and payment terms, with gaps clearly marked.',
+  when:'A brief or enquiry comes in and you need a first draft of the quote today.',
+  gives:'A proposal with what they asked for, what you\'ll do, what\'s not included, timeframe, investment, payment terms and next step, plus a plain-text version for email.',
+  reads:'Your offers and pricing, brand voice, rules, and who you are not for.',
+  tryit:'<code>/proposal-drafter sandbox/sample-brief.md</code>, then try <code>sandbox/sample-brief-excluded.md</code> to see it stop on something you don\'t do.',
+  stops:['Two of your offers could fit','The brief asks for something your offer excludes','A discount applies: it names the rule so you can remove it'],
+  never:['Send the proposal or contact the customer','Invent a price, warranty or testimonial','Commit to a start or finish date'],
+  ideas:['Variation quotes when a job changes','Renewal or price-rise letters','A first draft of a grant or tender response']},
+ {g:2,id:'sop-writer',t:'Write a procedure (SOP)',
+  what:'Turns a rough description, a voice note or a checklist into a clear standard operating procedure.',
+  when:'Something only one person knows how to do, or a new starter keeps asking the same questions.',
+  gives:'An SOP with purpose, who, before you start, numbered steps that start with a verb, checks, what to do if it goes wrong, and an owner.',
+  reads:'Your rules (never do, always check with a human, legal notes, who to escalate to) and how you spell and format things.',
+  tryit:'<code>/sop-writer sandbox/sample-process-notes.md</code>. Better still, record yourself explaining a task and give it the transcript.',
+  stops:['The notes cover more than one process: it asks which one first','A safety or compliance step your rules don\'t state: it marks it [CHECK] for you to confirm'],
+  never:['Say the SOP is compliant, certified or meets a standard','Invent safety or legal requirements','Share or publish it'],
+  ideas:['An onboarding checklist for new starters','A client handover pack','A quality checklist for the end of every job']},
+ {g:2,id:'job-ad-writer',t:'Write a job ad',
+  what:'A job ad and five screening questions in your company\'s voice from rough role notes, with inclusive wording.',
+  when:'You\'re hiring and have a few lines about the role.',
+  gives:'A complete ad for each role, five screening questions, and notes on wording to check. Pay and award details stay [CHECK] until you confirm them.',
+  reads:'Brand voice, your offers (for "about us"), and your rules and legal notes.',
+  tryit:'<code>/job-ad-writer sandbox/sample-role-notes.md</code>',
+  stops:['Pay, award or entitlements you haven\'t given: left as [CHECK] for your payroll adviser'],
+  never:['Post the ad anywhere','Use requirements tied to age, gender, family or other protected attributes','Ask screening questions about health, family or background'],
+  ideas:['An interview question pack','A position description','A welcome letter and first-week plan for a new starter']}
+];
+
+const art=w=>w;
+document.getElementById('groups').innerHTML=GROUPS.map((g,gi)=>`<h2 class="sec">${g[0]}</h2><p class="secnote">${g[1]}</p><div class="grid">${W.map((w,i)=>w.g===gi?`<button class="tile" data-i="${i}"><span class="n">${i+1} of ${W.length}</span><span class="t">${w.t}</span><span class="cmd">/${w.id}</span><span class="d">${w.what}</span></button>`:'').join('')}</div>`).join('');
+document.querySelectorAll('.tile').forEach(b=>b.onclick=()=>openCard(+b.dataset.i));
+
+const view=document.getElementById('view'); let cur=0;
+const $=id=>document.getElementById(id);
+const li=a=>a.map(x=>`<li>${x}</li>`).join('');
+function render(){
+  const w=W[cur];
+  $('v-group').textContent=GROUPS[w.g][0]; $('v-pos').textContent=`${cur+1} of ${W.length}`;
+  $('v-title').textContent=w.t; $('v-cmd').textContent='/'+w.id; $('v-what').textContent=w.what;
+  $('v-when').textContent=w.when; $('v-gives').textContent=w.gives; $('v-reads').textContent=w.reads;
+  $('v-try').innerHTML=w.tryit; $('v-stops').innerHTML=li(w.stops); $('v-never').innerHTML=li(w.never); $('v-ideas').innerHTML=li(w.ideas);
+}
+function openCard(i){ cur=(i+W.length)%W.length; view.hidden=false; $('index').hidden=true; render(); try{history.replaceState(null,'','#'+W[cur].id)}catch(e){} $('b-next').focus(); }
+function closeCard(){ view.hidden=true; $(page).hidden=false; try{history.replaceState(null,'',' ')}catch(e){} }
+$('b-prev').onclick=()=>openCard(cur-1); $('b-next').onclick=()=>openCard(cur+1); $('b-idx').onclick=closeCard;
+$('b-fs').onclick=()=>{try{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{})}catch(e){}};
+document.addEventListener('keydown',e=>{
+  if(e.metaKey||e.ctrlKey||e.altKey) return;
+  if(e.key==='f'||e.key==='F'){ $('b-fs').click(); return; }
+  if(view.hidden) return;
+  if(e.key==='ArrowRight'){openCard(cur+1)} else if(e.key==='ArrowLeft'){openCard(cur-1)} else if(e.key==='Escape'){closeCard()}
+});
+
+let page='index';
+function showPage(id){ page=id; ['index','build'].forEach(x=>$(x).hidden=x!==id); view.hidden=true; document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.page===id?'true':'false')); try{history.replaceState(null,'',id==='build'?'#build':' ')}catch(e){} window.scrollTo(0,0); }
+document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+const h=(location.hash||'').slice(1); if(h==='build') showPage('build'); const hi=W.findIndex(w=>w.id===h); if(hi>=0) openCard(hi);
+</script>
+</html>
