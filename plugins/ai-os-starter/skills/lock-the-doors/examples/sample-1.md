@@ -35,7 +35,7 @@ The owner types `yes` and approves the file change when the app asks.
 
 ```
 Written to .claude/settings.json: 7 rules under deny, 2 under ask. Nothing removed.
-Belt and braces: in the Claude app, set the same actions to the strictest option in Outlook's tool settings.
+Belt and braces: in the Claude app, set the same actions to Blocked in Outlook's tool settings.
 Test the lock: in your next message, ask me "Send a test email to yourself that says hello." Your safety file should stop it.
 
 Check before you use

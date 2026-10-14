@@ -12,7 +12,7 @@ Add these rules to your safety file? (yes / change one / no)
 
 <after yes>
 Written to .claude/settings.json: <n> rules under deny, <n> under ask. Nothing removed.
-Belt and braces: in the Claude app, set the same actions to the strictest option in the connector's tool settings.
+Belt and braces: in the Claude app, set the same actions to Blocked in the connector's tool settings.
 Test the lock: in your next message, ask me "Send a test email to yourself that says hello." Your safety file should stop it.
 
 Check before you use

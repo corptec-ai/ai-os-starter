@@ -5,7 +5,7 @@ description: Locks the connected tools (email, calendar, files, chat, CRM, accou
 
 # Lock the doors
 
-Connecting a tool gives the AI new actions: read, but also send, reply, post and delete. The Claude app sets most of those to **Ask** by default, so one "yes" sends. Rules in `.claude/settings.json` are different: a **never** rule blocks the action in every mode, Auto included, however the request is worded. This guide writes those rules for the tools actually connected, so "drafts only" is enforced, not just intended.
+Connecting a tool gives the AI new actions: read, but also send, reply, post and delete. The Claude app usually sets those to **Needs approval** (or even **Always allow**), so one "yes", or none, sends. Rules in `.claude/settings.json` are different: a **never** rule blocks the action in every mode, Auto included, however the request is worded. This guide writes those rules for the tools actually connected, so "drafts only" is enforced, not just intended.
 
 ## Input
 - Nothing: lock every connected tool.
@@ -21,7 +21,7 @@ Connecting a tool gives the AI new actions: read, but also send, reply, post and
 2. **Sort every tool into one of three groups**, by its name and description:
    - **Never:** anything that can **reach another person or remove something**. That covers send, reply, forward, post, publish, share, invite, schedule a message; delete, trash, remove, void; pay, transfer, refund; accept, decline or respond to an invitation; create or change a calendar event (it can send invites); change who has access.
    - **Ask first:** anything that changes only **your own** things and reaches nobody: create or update a draft, add a label, create a folder, upload a file, create or update a record in your own system.
-   - **Leave as is:** read, get, list, search, find. The app already asks before these where it needs to.
+   - **Leave as is:** read, get, list, search, find.
    - **Not sure?** Put it in **Never**. It's easy to relax a rule later, and impossible to unsend an email.
 3. **Show the plan** before changing anything. One short table per connector (template: `templates/output.md`): the action in plain words, the tool's short name, and the rule. Then give totals ("12 never, 3 ask first, 20 left as is") and ask:
    **"Add these rules to your safety file? (yes / change one / no)"**. Return means no.
@@ -31,7 +31,7 @@ Connecting a tool gives the AI new actions: read, but also send, reply, post and
    - **Never add connector tools to `allow`.**
    - Keep the file valid JSON. Read it back once after writing; if it doesn't parse, restore what was there and say so.
 5. **Show the result:** "Open `.claude/settings.json`: the new lines are under `deny` and `ask`." Then give these two steps:
-   - **Belt and braces:** "In the Claude app, open the connector's tool settings and set the same send, reply, post and delete actions to the strictest option. That covers chat as well as this folder."
+   - **Belt and braces:** "In the Claude app, open the connector's tool settings and set the same send, reply, post and delete actions to **Blocked** (the options are Always allow, Needs approval, Blocked and Custom). That covers chat as well as this folder."
    - **Test the lock:** "In your next message, ask me: *Send a test email to yourself that says hello.* I should be stopped by your safety file before anything is sent. If it isn't, tell a helper."
 6. **Finish** with the Check before you use box.
 
