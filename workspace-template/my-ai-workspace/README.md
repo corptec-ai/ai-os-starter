@@ -16,4 +16,4 @@ This folder is yours. Everything you build in the workshop lives here, and you k
 
 **To start:** open the Claude app, click **Code** and choose this folder. If it asks whether you trust the folder, choose **Trust**: that switches on your safety rules. Then type `/workspace-check` and press Return.
 
-*The `ai-os-starter` plugin has nineteen skills: ten ready-made workflows and nine guides.*
+*The `ai-os-starter` plugin has twenty skills: ten ready-made workflows and ten guides.*

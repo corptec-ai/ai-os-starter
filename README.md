@@ -57,10 +57,11 @@ Then install **ai-os-starter**. Or, in Claude Code:
 | `/workflow-blueprint` | Designs the workflow step by step and simulates it on sample data |
 | `/sample-data-maker` | Makes safe, fictional sample inputs to test with |
 | `/skill-builder` | Turns your blueprint into your own working workflow |
+| `/lock-the-doors` | Locks your connected tools so nothing can be sent, posted or deleted through them |
 | `/test-pack` | Tests your workflow on normal and unusual cases |
 | `/go-live-runbook` | Writes the one-page runbook: owner, checks, how to switch it off |
 
-*Version 0.3.0: the full workshop kit.*
+*Version 0.4.0: the full workshop kit, with ten guides.*
 
 ## Updates
 

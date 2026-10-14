@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.0 (connector lock)
+- New guide `lock-the-doors` (Session 6): finds the send, reply, post, delete and pay actions of each connected tool and, after approval, adds exact "never" rules (and "ask first" rules for drafts) to `.claude/settings.json`, then shows how to test the lock. Found in the 14 Oct dry run: connector send actions default to Ask in the app, and the starter safety file had no connector rules.
+- `workspace-check`: line 4 turns amber when tools are connected but not locked, pointing to `/lock-the-doors`.
+- Plugin version now matches the release (0.3.1 shipped with the manifest still at 0.3.0).
+
+## 0.3.1 (kit guide)
+- Workspace template: `START-HERE.html`, the take-home kit guide (the ten workflows, and building your next one at home).
+- `skill-builder`: "Manual mode" wording, matching the app's mode menu.
+
 ## 0.3.0 (workshop kit)
 - Nine workshop guides: workspace-check (full), business-dna-interview, dna-check, opportunity-mapper, workflow-blueprint, sample-data-maker, skill-builder, test-pack, go-live-runbook.
 - Workspace template: use file tools only (no shell commands, no surprise permission prompts); example blueprint in the sandbox.
