@@ -37,7 +37,7 @@ Draft public replies to online reviews. Warm when the review is good, calm when 
    - a short neutral holding line the owner *could* use (e.g. "Thanks for letting us know. We take this seriously and would like to talk with you directly. Please contact our <role> on <public contact>."). The role and public contact come from "Escalation contacts by role" in `business-rules.md`, or `[CHECK: public contact]`.
 5. **Positive:** a short, specific thank-you that mentions what they praised, in their words where you can. **60 words or fewer.**
 6. **Mixed or negative (not HUMAN FIRST):** **80 words or fewer.**
-   - acknowledge what they experienced;
+   - acknowledge each distinct non-sensitive service concern they raise;
    - thank them for the feedback;
    - no excuses, no "but", no correcting their version;
    - no details of the job, the customer, dates or prices that the reviewer didn't say first;
@@ -87,7 +87,7 @@ Source: <file or "pasted"> · <n> reviews
 - Argue, correct the reviewer, or hint they're lying.
 - Make up facts, policies, contact details or promises. Use `[CHECK: …]`.
 - Give legal advice on a review that threatens action. Flag it: "Have your adviser check this."
-- Copy personal details into the output beyond what the reply needs.
+- Copy phone numbers or other private details into the draft, quotes, flags, assumptions or `[CHECK]` items.
 - Ask for or store passwords, API keys or card numbers.
 
 ## Edge cases

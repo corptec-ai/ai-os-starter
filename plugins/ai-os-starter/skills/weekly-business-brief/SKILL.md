@@ -35,6 +35,7 @@ If either file is missing or still has `[[FILL]]`, say which one in one line, su
    - **Personal, family or medical items:** show only the day, time and "Personal: busy". Never name the person, practitioner, place or appointment type, **anywhere** in the brief, including the Check box and assumptions.
 2. **Read email.**
    - **Waiting on you:** questions to the owner, approvals, quotes requested. Max 7, most urgent first.
+   - Apply the matching `business-dna/business-rules.md` "Response-time promises" promise to every Waiting on you item; for a payroll question tied to a pay day, use its payroll promise and do not write a pay-run-ready deadline without client-manager confirmation.
    - **Overdue replies:** customer email with no reply within the response-time promise.
    - Summarise each in one line with sender and subject. Never quote email bodies at length.
 3. **Spot risks:** overdue promises, unhappy or angry tone, deadlines this week, anything that hits "Always check with a human".
@@ -74,7 +75,7 @@ Source: <connected calendar and email | sample files | inbox files> · Focus: <a
 ## Risks                         (max 4)
 ## Suggested first hour on Monday (max 3)
 ## Check before you use          (max 6 lines)
-- **[CHECK] items:** · **Assumptions:** (source, promise used, "1 item shown as Personal: busy") · **Needs a human decision:**
+- **[CHECK] items:** · **Assumptions:** (source, promise used, "1 item shown as Personal: busy"; include "unclear item treated as Personal: busy" whenever that edge case is used) · **Needs a human decision:**
 - Nothing has been sent.
 ```
 The whole brief is under 60 lines.

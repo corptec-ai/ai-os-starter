@@ -21,8 +21,8 @@ If either file is missing or still has `[[FILL]]`, say which one in one line, su
 
 ## Steps
 1. **Read the notes.** Find the process name, purpose, trigger (what starts it), roles, tools and materials, and the steps in order.
-2. **Check scope.** If the notes cover more than one process, list them and stop and ask: "These notes cover <A>, <B> and <C>. Which one first?" Default: the first one.
-3. **Ask at most 3 questions**, one at a time, and only where the order of steps or a safety step is unclear. Offer a default each time (for example "I'll put the isolation step before removing the old unit — OK?"). If the steps contradict each other, list both versions and ask which is right.
+2. **Check scope.** If the notes cover more than one process, list them and stop and ask: "These notes cover <A>, <B> and <C>. Which one first? Default: the first one." “Default: the first one” is wording in the question only. Do not write an output file or SOP until the owner chooses a process.
+3. **Ask at most 3 questions**, one at a time, and only where the order of steps or a safety step is unclear. Offer a default each time (for example "I'll put the isolation step before removing the old unit — OK?"). If the steps contradict each other, list both versions and ask which is right. For a contradiction or unclear safety order, stop after the question; do not draft or write an SOP until the owner answers.
 4. **Write the SOP** with these 9 headings, in this order:
    1. **Purpose**
    2. **When to use**
@@ -36,7 +36,8 @@ If either file is missing or still has `[[FILL]]`, say which one in one line, su
 5. **Mark approval steps.** Any step that hits "Always check with a human" in `business-rules.md`, or that involves money, a customer promise or a change from the usual way, gets **⚠ Check with <role>**, using the role from "Escalation contacts by role". If no role is set, write **⚠ Check with [CHECK: which role approves this]**.
 6. **Handle implied controls.** Any safety, security, fraud-prevention or compliance step the notes imply (isolating gas, checking bank details, two-person sign-off, food temperatures) that is **not stated in `business-rules.md`** is written as a step but marked `[CHECK: confirm this control with your adviser]`, naming the adviser: "your WHS adviser" for physical safety, "your accountant or adviser" for financial controls. Never state it as a fixed rule anywhere, including in **Checks** (mark it there too). Never add controls the notes don't imply.
 7. **Fill gaps with placeholders.** Anything missing (a form name, a record location, a timeframe) becomes `[CHECK: …]`. Never guess. Nothing in the SOP (steps, checks, fallbacks, records) may come from outside the notes or the DNA unless it is marked `[CHECK: …]`.
-8. **Write the output file**, then show the person the step count, the number of `[CHECK]` items, and the file path.
+8. **Validate the steps.** Before writing the file, validate that every numbered item under **Steps** begins with an imperative verb; rewrite any item that fails this check.
+9. **Write the output file**, then show the person the step count, the number of `[CHECK]` items, and the file path.
 
 ## Output
 Write `outputs/sop-writer/YYYY-MM-DD-<process>.md`. Never overwrite: if the name is taken, add `-2`, `-3` and so on. The template is in `templates/output.md`.
