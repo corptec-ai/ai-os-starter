@@ -24,10 +24,10 @@ If any of these files is missing or still has `[[FILL]]`, say which one in one l
 
 ## Steps
 1. **Read the idea.** Note who it's about, where, and what happened. Note any names of customers or staff, addresses, or photos of people.
-2. **Check it's safe to post.** If the idea is about an accident, injury, complaint, dispute, or a staff member leaving: stop and say "I'd suggest not posting about this one." Nothing further is written. Do not mention, invite or pre-offer a neutral public statement unless the current request asks for one.
+2. **Check it's safe to post.** If the idea is about an accident, injury, complaint, dispute, or a staff member leaving: stop and say "I'd suggest not posting about this one." Write no draft or output file; state any required business-rules escalation in the stop reply. Do not mention, invite or pre-offer a neutral public statement unless the current request asks for one.
 3. **Pick the segment.** Match the idea to a segment in `ideal-customers.md` → "Best customers". If two fit equally, stop and ask: "Who's this mainly for — <segment A> or <segment B>?" with the closer match as the default.
 4. **Write exactly 3 options**, one per hook type:
-   - **Client confidentiality takes priority.** If `business-rules.md` forbids revealing a client, its business, location, figures or client relationship, do not write an anonymised case story; use a fully generic service example with no client-specific facts or omit the story hook.
+   - **Client confidentiality takes priority.** If `business-rules.md` forbids revealing a client, its business, location, figures or client relationship, do not write an anonymised case story; use a fully generic service example with no client-specific facts or omit the story hook. Client-specific facts are forbidden anywhere in the output, including preambles, Notes, Check items, Assumptions and Needs a human decision; refer only to “the client name”, “location” and “figure”.
    - **Story** — what happened on the job or in the business.
    - **Useful tip** — one practical thing the reader can do.
    - **Problem → solution** — a customer problem in their words, then how it gets fixed.
@@ -41,9 +41,10 @@ If any of these files is missing or still has `[[FILL]]`, say which one in one l
 6. **Run a voice and rules check on each option** and write a one-line note. Look for:
    - **A named or pictured customer or staff member** without written permission already confirmed → "Mentions <name>: written permission is required before posting." Swap the name for a neutral description in the draft ("a family in Preston").
    - **An identifiable address** in the text or photo description → "Remove house number or street."
-   - **A factual assertion, customer story, operational pattern or outcome** the idea or DNA doesn't support → remove it; never use a `[CHECK]` placeholder for unsupported material.
+   - **A factual assertion, customer story, operational pattern or outcome** the idea or DNA doesn't support → remove it; never use a `[CHECK]` placeholder for unsupported material. Treat “one of the jobs we do most”, “we do it all the time” and “we hear it a lot” as unsupported operational patterns unless the idea or DNA proves them; delete them rather than flagging them.
    - **Prices, dates, figures or results** not in the DNA or the input → `[CHECK: confirm the figure]`.
    - **Anything in "Never say"** or **"Always check with a human"** → flag it, naming the role to check with.
+   - Before writing the file, audit the whole output, including drafts, Notes and Check before you use; delete unsupported claims, never recasting them as general knowledge or a check item.
 7. **Write the output file**, then show the person the three hooks in one line each, and the file path. Ask: "Want me to tweak any of these?"
 
 ## Output

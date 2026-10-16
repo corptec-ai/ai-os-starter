@@ -25,7 +25,7 @@ Draft a quote or short proposal from a customer brief, using only the business's
 ## Steps
 1. Read the brief. Note what the customer wants, in their words, plus location, size, timing and any budget they mention.
    - For dietary or allergy requests, refer only to an unspecified dietary or allergy request; never repeat a child's name, condition or requested medical information in any output section, including the Check before you use box and Plain-text version.
-2. **Check "What we never do".** If the brief asks for something on that list, don't quote it. Write a polite decline in the summary, suggest an alternative offer if one genuinely exists, and stop there (no pricing section).
+2. **Check "What we never do".** If the requested service itself is on that list, don't quote it. Write a polite decline in the summary, suggest an alternative offer if one genuinely exists, and stop: write nothing further (no pricing section). If the prohibited item is only a promise or label, decline it, flag it for the Owner, and continue to quote the matched compliant offer. Stop with no pricing only if no compliant version of the offer remains.
 3. **Match to offers** in `products-services.md`. Use the offer the person named, if any.
    - **If no offer fits, stop.** Say so in one line, and give a short suggested reply to the customer (thank them, say it's not something we do, suggest who might help if the DNA says). Don't stretch an offer to fit.
    - **Stop and ask** if two offers fit equally: "This could be <A> or <B>. Which one? (Return for <A>)". After that message, write no output file or anything further: do not calculate, compare, quote or present payment terms for either offer.
@@ -37,7 +37,7 @@ Draft a quote or short proposal from a customer brief, using only the business's
    - **What's not included:** from the offer's exclusions.
    - **Timeframe:** the offer's typical timeframe, or `[CHECK: timeframe]`. Never a start date.
    - **Investment:** see the pricing rules below.
-   - **Payment terms:** from "Minimums, deposits, payment terms", or `[CHECK: payment terms]`. State only the terms that apply at the calculated total. Don't raise a deposit or payment rule whose threshold isn't met. If two applicable DNA payment terms conflict, do not infer precedence: write `[CHECK: payment terms]` and escalate to the Owner.
+   - **Payment terms:** from "Minimums, deposits, payment terms", or `[CHECK: payment terms]`. State only the terms that apply at the calculated total. Don't raise a deposit or payment rule whose threshold isn't met. For recurring offers, evaluate minimums, deposits and payment thresholds for the charge or invoice period set by the DNA (for example, each weekly invoice); a multi-period projection does not trigger an order threshold unless the DNA says it does. If two applicable DNA payment terms conflict, do not infer precedence: write `[CHECK: payment terms]` and escalate to the Owner.
    - **Next step:** e.g. "Reply to book a site visit". No dates promised.
 6. **Pricing rules:**
    - Use only rates or ranges stated in `pricing-positioning.md`. Every price must appear there; never invent one.
