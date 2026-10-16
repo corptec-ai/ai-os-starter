@@ -27,7 +27,8 @@ Work through these in order. Mark each line 🟢, 🟠 or 🔴 (line 8 is inform
    - 🟠 some `[[FILL]]` left: say how many files. Also 🟠 "looks thin" for a file with under 5 lines of real content (not counting headings and `[[FILL]]`).
    - 🔴 a file is missing: "Run `/business-dna-interview`."
 4. **Safety file.** Read `.claude/settings.json`.
-   - 🟢 it has a `deny` list that blocks deleting (e.g. `rm`) and an `ask` list that covers `business-dna`. If it also has deny rules for sending through connected tools (tool names containing "send", "post" or "reply"), say so; if not, add "(send rules are added when you connect tools in Session 6)" and stay green.
+   - 🟢 it has a `deny` list that blocks deleting (e.g. `rm`) and an `ask` list that covers `business-dna`. If it also has deny rules naming connected tools (full names starting `mcp__`), say "connected tools locked". If not, and no tools are connected (line 7), add "(send rules are added when you connect tools in Session 6)" and stay green.
+   - 🟠 tools are connected (line 7) but none of their tools appear in `deny`: "Connected tools aren't locked yet: run `/lock-the-doors`."
    - 🟠 present but no delete rule, or no `ask` rule covering `business-dna`: "Ask a helper to restore the safety file from the kit."
    - 🔴 missing: "Restore it from the kit; ask a helper."
 5. **Workflow library.** Check the skills available in this session for the ten ready-made workflows: `meeting-to-actions`, `email-reply-drafter`, `enquiry-triage`, `proposal-drafter`, `social-post-writer`, `weekly-business-brief`, `sop-writer`, `review-responder`, `job-ad-writer`, `invoice-follow-up`. Count each one whether or not it has the `ai-os-starter:` prefix.
@@ -35,7 +36,7 @@ Work through these in order. Mark each line 🟢, 🟠 or 🔴 (line 8 is inform
 6. **Your materials.** Count the files in `inbox/`, not counting `README.md`.
    - 🟢 3 or more · 🟠 1–2 · 🔴 empty: "Add your website copy and price list before Session 2."
 7. **Connected tools.** Name the connected tools (connectors) available in this session, by name only. **Don't call them.**
-   - 🟢 one or more: list their names.
+   - 🟢 one or more: list their names. (Whether they're locked is reported on line 4.)
    - 🟠 none: "Fine for now. We connect tools in Session 6."
    - 🔴 none, and the person has said they've finished Session 6: "Ask a helper to connect your email or calendar."
 8. **Workflow progress** (information only, no colour). Say which of these exist:
