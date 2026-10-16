@@ -61,7 +61,7 @@ Then install **ai-os-starter**. Or, in Claude Code:
 | `/test-pack` | Tests your workflow on normal and unusual cases |
 | `/go-live-runbook` | Writes the one-page runbook: owner, checks, how to switch it off |
 
-*Version 0.4.0: the full workshop kit, with ten guides.*
+*Version 0.5.0: the full workshop kit, with ten guides; all ten workflows hardened.*
 
 ## Updates
 
