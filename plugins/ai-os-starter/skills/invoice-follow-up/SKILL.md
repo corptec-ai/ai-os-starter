@@ -11,7 +11,7 @@ From a list of open invoices, draft polite but firm payment reminders in three e
 - A file path in `$ARGUMENTS` (for example `sandbox/sample-invoices.csv`), or a pasted list. Each row needs: customer, invoice number, amount, issue date, due date. Optional: contact, notes.
 - After Session 6, a connected accounting tool, **read only**.
 - If there's no input, ask: "Which invoices? Give me an export file, or paste the list."
-- If a required column is missing for every row (say, no amounts), say which one in one line and stop. Don't guess figures.
+- If a required column is missing for every row (say, no amounts), say which one in one line and stop. Do not write anything else: no overdue, band, contact or draft analysis, output file or Check before you use box. Don't guess figures.
 
 ## What it reads
 - `business-dna/pricing-positioning.md`: "Minimums, deposits, payment terms" (the payment terms and how to pay).

@@ -43,7 +43,7 @@ Sort new enquiries by how well they fit the business's ideal customers, spot red
    - call, send info about <offer>, book a site visit for <offer>, politely decline, or refer elsewhere.
    - If no offer fits, the step is "decline" or "refer elsewhere". Never invent an offer.
    - Suggest an owner **by role** (from "Escalation contacts by role"), never a personal phone number.
-7. **Sort** the main table A, then B, then C, then ?. Red-flagged enquiries appear **only** in the "Red-flagged enquiries" section after the table, with the quoted phrase and the matched red flag.
+7. **Sort** the main table A, then B, then C, then ?. Red-flagged enquiries appear **only** in the "Red-flagged enquiries" section after the table, with the quoted phrase and the matched red flag. A red-flagged lead's name, fit rationale and any "otherwise an A" note appear only in its red-flag table row; omit them from "Why the A's" and every other section.
 8. Write the output file. Show the person the summary line and the file path.
 
 ## Approval points

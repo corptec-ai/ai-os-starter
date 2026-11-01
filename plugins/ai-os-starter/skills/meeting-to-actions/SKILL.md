@@ -19,12 +19,14 @@ Turn a meeting's notes or transcript into a clear record and a follow-up email *
    - **Actions:** owner, task, due date.
    - **Open questions.**
    - **Risks** that were mentioned.
+   - Record an action only if the notes explicitly assign it or agree it; keep unassigned questions only under Open questions, never in the email actions table, even with `?` or `TBD`.
 3. **Owner and date rules:**
    - The owner must be a person named in the input; otherwise write `?`.
    - The due date must be stated in the input; otherwise write `TBD`.
    - Never guess either.
 4. **Leave personal remarks out of the email.** Comments about someone's performance, health or private life go in the record under "Flagged, not included", with a one-line note.
 5. Draft the follow-up email using `business-dna/brand-voice.md`. If the brand voice is still `[[FILL]]`, use plain, friendly Australian English and add `[CHECK: brand voice not set yet]`.
+   - Do not calculate, quote or put a Business DNA price in the record or email unless the meeting states the figure; `[CHECK]` does not permit an unstated figure.
    - Thank people.
    - Summarise in 3–5 bullets.
    - Include the actions table.

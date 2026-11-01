@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0 (library hardening)
+- All ten ready-made workflows hardened with 80 new test cases (normal, messy, sensitive, edge and adversarial; 8 per workflow) run 3 times each and graded against each workflow's rules. Final: every workflow at 22/24 or better, with no Never-list breaches.
+- Fixes include: never repeating a child's name or medical details (proposal-drafter); holding replies that name the documented decision-maker and never claim an email was passed on (email-reply-drafter); stop-and-ask only when the Business DNA doesn't settle a safety or order question, with verb-first steps (sop-writer); no unsupported claims and DNA-aware client confidentiality (social-post-writer); no figures nobody stated, and only assigned actions (meeting-to-actions); no invented deadlines (weekly-business-brief); red-flag leads only in the red-flag section (enquiry-triage); a stop means stop (invoice-follow-up); each specific concern addressed and no personal details (review-responder).
+- Test sets and results live in the workshop's kit-tests/hardening folder.
+- Licensed under MIT (LICENSE at the repo root and inside the plugin).
+
 ## 0.4.0 (connector lock)
 - New guide `lock-the-doors` (Session 6): finds the send, reply, post, delete and pay actions of each connected tool and, after approval, adds exact "never" rules (and "ask first" rules for drafts) to `.claude/settings.json`, then shows how to test the lock. Found in the 14 Oct dry run: connector send actions default to Ask in the app, and the starter safety file had no connector rules.
 - `workspace-check`: line 4 turns amber when tools are connected but not locked, pointing to `/lock-the-doors`.

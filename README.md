@@ -61,7 +61,7 @@ Then install **ai-os-starter**. Or, in Claude Code:
 | `/test-pack` | Tests your workflow on normal and unusual cases |
 | `/go-live-runbook` | Writes the one-page runbook: owner, checks, how to switch it off |
 
-*Version 0.4.0: the full workshop kit, with ten guides.*
+*Version 0.5.0: the full workshop kit, with ten guides; all ten workflows hardened.*
 
 ## Updates
 
@@ -71,4 +71,4 @@ Improvements arrive through the plugin. In Claude Code, run `/plugin marketplace
 
 Built and maintained by [Corptec Technology Partners](https://www.corptec.com.au), Melbourne. Questions about the workshop: talk to your Corptec contact.
 
-Licence: to be confirmed by Corptec before public release.
+Licence: [MIT](LICENSE). © 2026 Corptec Technology Partners Pty Ltd. Free to use, copy and adapt; provided as is, with no warranty.
