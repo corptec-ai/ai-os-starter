@@ -71,4 +71,4 @@ Improvements arrive through the plugin. In Claude Code, run `/plugin marketplace
 
 Built and maintained by [Corptec Technology Partners](https://www.corptec.com.au), Melbourne. Questions about the workshop: talk to your Corptec contact.
 
-Licence: to be confirmed by Corptec before public release.
+Licence: [MIT](LICENSE). © 2026 Corptec Technology Partners Pty Ltd. Free to use, copy and adapt; provided as is, with no warranty.
