@@ -8,7 +8,7 @@ description: Writes a go-live runbook for a custom AI workflow: purpose, owner, 
 Write the one page that turns the custom workflow into a business system rather than a workshop demo: what it does, who owns it, when it runs, how to check it, how to stop it, and how you'll know in 30 days whether it was worth it. **One page, under 70 lines.**
 
 ## Input
-- The skill name in `$ARGUMENTS` (for example `hot-water-quote-reply`). If none is given, use the newest custom skill in `.claude/skills/` and confirm: "Write the runbook for **<name>**? (Return = yes)".
+- The skill name in `$ARGUMENTS` (for example `hot-water-quote-reply`). If none is given, use the newest custom skill in `.claude/skills/` and confirm: "Write the runbook for **<name>**? (type Accept for yes)".
 - If there's no blueprint or skill for that name, say so and suggest `/workflow-blueprint` or `/skill-builder`. Then stop.
 
 ## What it reads
@@ -20,8 +20,10 @@ Write the one page that turns the custom workflow into a business system rather 
 - Anything missing becomes `[CHECK: …]`. Never stop with an error.
 
 ## Steps
+Where a question states a default, the typed word `Accept` or `return`, in any capitals, chooses that default.
+
 1. **Pre-fill** everything you can from the files above.
-2. **Ask at most six questions, one at a time,** each with a default the owner can accept with Return. Skip any the files already answer.
+2. **Ask at most six questions, one at a time,** each with a default the owner can accept by typing the word Accept, shown as "(type Accept for <default>)". Skip any the files already answer.
    1. Who owns this workflow? (a role, e.g. "Office Coordinator")
    2. Who covers when they're away? (a role)
    3. When does it run? (default: on demand; or daily, weekly)
@@ -46,7 +48,7 @@ Write the one page that turns the custom workflow into a business system rather 
    - **Test status**: the latest score and date from `test-log.md`, and PILOT or LIVE.
    - **Change log**: from the build log, plus today's line "Runbook written".
    End with the short Check before you use block (bold labels, not a heading).
-5. **Stop and ask.** Show the draft and ask: "Happy for me to save this? (Return = yes, or tell me what to change)". Apply edits, show the changed lines, and ask again.
+5. **Stop and ask.** Show the draft and ask: "Happy for me to save this? (type Accept for yes, or tell me what to change)". Apply edits, show the changed lines, and ask again.
 6. **Write `workflows/<name>/RUNBOOK.md`**, then tell the owner the status (PILOT or LIVE) and the 30-day check date.
 
 ## Approval points
@@ -68,6 +70,7 @@ Write the one page that turns the custom workflow into a business system rather 
 - **The workflow runs on a schedule:** add to "How to run it" that a schedule needs a paid Claude plan with scheduled tasks `[CHECK: confirm which plan with your Corptec contact]`, and that desktop schedules only run while the laptop is awake and the Claude app is open.
 - **It uses a connected tool:** name the tool in "How to run it", and make removing that connector one of the switch-off options.
 - **No build log:** write "v1, not recorded" in the Change log with `[CHECK: version]`.
+- **No real item yet to run it on:** don't keep asking. Offer the kit's `sandbox/sample-emails.md` once (type Accept for that), use it as the input in "How to run it" with `[CHECK: sample input; swap for a real one]`, and carry on.
 - **The owner can't give hours:** use `[CHECK: hours a week today]`; the measure still needs a date.
 
 ## Automated test runs

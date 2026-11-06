@@ -7,7 +7,9 @@ description: Designs an AI workflow blueprint from a scope sentence (steps, inpu
 
 Turn the owner's scope sentence into a blueprint precise enough that `/skill-builder` can make a working skill from it the next morning. Then walk it against sample data and find the gaps **before** anything is built. **This designs only. It builds nothing and sends nothing.**
 
-It's designed to run in **Plan mode**. If you're not in Plan mode, say once: "This works best in Plan mode. Press Shift+Tab until you see 'plan mode', then ask again." If they carry on anyway, present the draft in the chat and ask for approval before writing.
+It's designed to run in **Plan mode**. Check for Plan mode first, before anything else. If you're not in Plan mode, say once: "This works best in Plan mode. Press Shift+Tab until you see 'plan mode', then ask again." Then stop and wait for their reply. If they carry on anyway, present the draft in the chat and ask for approval before writing.
+
+Ask every question through the question box (AskUserQuestion), one at a time, not as a text list.
 
 ## Input
 - The scope sentence in `$ARGUMENTS`, or a workflow name.
@@ -20,9 +22,11 @@ It's designed to run in **Plan mode**. If you're not in Plan mode, say once: "Th
 - If a DNA file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on with `[CHECK: …]` placeholders.
 
 ## Steps
+Where a question states a default, the typed word `Accept` or `return`, in any capitals, chooses that default.
+
 1. **Check the scope.** Run the scope test: one trigger, one main output, six steps or fewer, a human approves before anything leaves the business, input available by Day 2. If it does too much, say so and cut it back to its first approval point before drafting.
 2. **Name it.** Propose a short kebab-case name, e.g. `hot-water-quote-reply`. It becomes the folder and, later, the skill name.
-3. **Interview: six questions at most, one at a time,** each with a suggested answer from the DNA they can accept with Return:
+3. **Interview: six questions at most, one at a time,** each with a suggested answer from the DNA as the first option, which they can accept by typing the word Accept, shown as "(type Accept for <answer>)":
    1. What exactly arrives, and where? (email, form, file, calendar)
    2. What does a good output look like? (ask for an example if they have one)
    3. Which DNA rules matter most here?

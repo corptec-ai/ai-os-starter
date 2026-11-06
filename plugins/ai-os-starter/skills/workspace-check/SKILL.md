@@ -23,8 +23,9 @@ Work through these in order. Mark each line 🟢, 🟠 or 🔴 (line 8 is inform
 2. **CLAUDE.md loads the Business DNA.** Count the five `@business-dna/<file>.md` lines.
    - 🟢 all 5 · 🟠 1–4 (name the missing ones) · 🔴 none: "Restore CLAUDE.md from the kit."
 3. **Business DNA filled.** The five files: `brand-voice.md`, `ideal-customers.md`, `products-services.md`, `pricing-positioning.md`, `business-rules.md`.
-   - 🟢 all five exist with no `[[FILL]]` left.
-   - 🟠 some `[[FILL]]` left: say how many files. Also 🟠 "looks thin" for a file with under 5 lines of real content (not counting headings and `[[FILL]]`).
+   - **Sample content doesn't count as filled.** A file holds sample content if it names the kit's sample business (Northside Plumbing), or if a line of real content matches its copy in `sandbox/example-business-dna/` word for word.
+   - 🟢 all five exist with no `[[FILL]]` left and no sample content.
+   - 🟠 some `[[FILL]]` left: say how many files. Also 🟠 for sample content: say how many files, and "Run `/business-dna-interview`." Also 🟠 "looks thin" for a file with under 5 lines of real content (not counting headings and `[[FILL]]`).
    - 🔴 a file is missing: "Run `/business-dna-interview`."
 4. **Safety file.** Read `.claude/settings.json`.
    - 🟢 it has a `deny` list that blocks deleting (e.g. `rm`) and an `ask` list that covers `business-dna`. If it also has deny rules naming connected tools (full names starting `mcp__`), say "connected tools locked". If not, and no tools are connected (line 7), add "(send rules are added when you connect tools in Session 6)" and stay green.
@@ -33,7 +34,7 @@ Work through these in order. Mark each line 🟢, 🟠 or 🔴 (line 8 is inform
    - 🔴 missing: "Restore it from the kit; ask a helper."
 5. **Workflow library.** Check the skills available in this session for the ten ready-made workflows: `meeting-to-actions`, `email-reply-drafter`, `enquiry-triage`, `proposal-drafter`, `social-post-writer`, `weekly-business-brief`, `sop-writer`, `review-responder`, `job-ad-writer`, `invoice-follow-up`. Count each one whether or not it has the `ai-os-starter:` prefix.
    - 🟢 all 10 · 🟠 some missing (say how many) · 🔴 none: "Click + → Plugins → install ai-os-starter."
-6. **Your materials.** Count the files in `inbox/`, not counting `README.md`.
+6. **Your materials.** Count the files in `inbox/`, not counting `README.md` or an empty `kickoff-notes.md`.
    - 🟢 3 or more · 🟠 1–2 · 🔴 empty: "Add your website copy and price list before Session 2."
 7. **Connected tools.** Name the connected tools (connectors) available in this session, by name only. **Don't call them.**
    - 🟢 one or more: list their names. (Whether they're locked is reported on line 4.)

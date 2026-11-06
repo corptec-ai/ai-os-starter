@@ -8,7 +8,7 @@ description: Builds a custom Claude Code skill (SKILL.md) from an approved workf
 Turn an approved workflow blueprint into a working skill the owner can run as `/<name>` on sample data within minutes, and improve themselves. The skill follows the same rules as every workflow in the library: **drafts only, no made-up facts, and a Check before you use box at the end.**
 
 ## Input
-- A workflow name in `$ARGUMENTS` (for example `hot-water-quote-reply`). If none is given, use the newest `workflows/<name>/blueprint.md` and confirm: "Build the skill for **<name>**? (Return = yes)".
+- A workflow name in `$ARGUMENTS` (for example `hot-water-quote-reply`). If none is given, use the newest `workflows/<name>/blueprint.md` and confirm: "Build the skill for **<name>**? (type Accept for yes)".
 - `workflows/<name>/blueprint.md`, the approved blueprint.
 - `workflows/<name>/simulation-log.md`, so the fixes found on Day 1 carry over. If it's missing, say so in one line and carry on.
 - If there's no blueprint at all, say: "There's no blueprint yet. Run `/workflow-blueprint` first." Then stop.
@@ -19,8 +19,10 @@ Turn an approved workflow blueprint into a working skill the owner can run as `/
 - If a cited DNA file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on. The rule stays in the skill as a reference.
 
 ## Steps
-1. **Check the blueprint is ready.** It needs all nine headings: Trigger, Inputs, Steps, Business rules applied, Approval points, Output, Success criteria, Out of scope, Failure handling. It needs six steps or fewer, and at least one approval point. If anything is missing, list what in plain words and ask: "Run `/workflow-blueprint` again to fix this? (Return = yes)". **Don't guess or fill gaps yourself.** Stop here.
-2. **Check the name.** If `.claude/skills/<name>/` already exists, ask: "There's already a skill called <name>. Make a new version (`<name>-v2`), or update this one and show you the changes? (Return = new version)". Never overwrite silently.
+Where a question states a default, the typed word `Accept` or `return`, in any capitals, chooses that default.
+
+1. **Check the blueprint is ready.** It needs all nine headings: Trigger, Inputs, Steps, Business rules applied, Approval points, Output, Success criteria, Out of scope, Failure handling. It needs six steps or fewer, and at least one approval point. If anything is missing, list what in plain words and ask: "Run `/workflow-blueprint` again to fix this? (type Accept for yes)". **Don't guess or fill gaps yourself.** Stop here.
+2. **Check the name.** If `.claude/skills/<name>/` already exists, ask: "There's already a skill called <name>. Make a new version (`<name>-v2`), or update this one and show you the changes? (type Accept for a new version)". Never overwrite silently.
 3. **Write `.claude/skills/<name>/SKILL.md`** using `templates/output.md`. Keep it under 150 lines and in plain English the owner could edit.
    **Business rules go in one place only:** the "Business rules (from your DNA)" section, one line each in the form ``- `<file>.md` → <Heading>: <what it's used for, in your own words, 8 words max>``. Steps and the Never list point to that section; they never restate a rule, price, threshold or deadline.
    **Before showing it, check for copying:** search `business-dna/` (with the search tool, not a shell command) for every line of your draft that mentions a price, number, limit, policy, "never" or "always". If any run of six or more words also appears in a DNA file, replace it with the reference. Repeat until nothing matches.
@@ -36,7 +38,7 @@ Turn an approved workflow blueprint into a working skill the owner can run as `/
    - **Self-check before saving:** count the blueprint's approval points and the skill's "Stop and ask" lines; they must match. Every cited heading exists word for word in its DNA file. No sentence is copied from the DNA, including in the Never list. Fix anything that fails.
 4. **Write `templates/output.md`** from the blueprint's filled example, and **`examples/sample-1.md`** with one worked input and output from the simulation log (or from the first sandbox sample if the log has none).
 5. **Show it for approval.** Saving into `.claude/` opens the diff view. Explain each section in one plain line, for example "Steps: the five things it does, in the order you designed." Then **wait for the owner to accept** in the diff view. If they reject or ask for a change, make it and show it again.
-6. **First run.** Ask: "Try `/<name>` now on one sandbox sample? (Return = yes, using `<sandbox file>`)". The default sample is `sandbox/<name>/sample-1.md` when it exists; otherwise the first matching sample in `sandbox/`. Suggest Manual mode so every file it writes is shown first. If `/<name>` doesn't show yet, follow the new SKILL.md directly for this run. Afterwards, check the output against each of the blueprint's Success criteria and show **pass** or **miss** for each, plus whether the Check before you use box is there.
+6. **First run.** Ask: "Try `/<name>` now on one sandbox sample? (type Accept for yes, using `<sandbox file>`)". The default sample is `sandbox/<name>/sample-1.md` when it exists; otherwise the first matching sample in `sandbox/`. Suggest Manual mode so every file it writes is shown first. If `/<name>` doesn't show yet, follow the new SKILL.md directly for this run. Afterwards, check the output against each of the blueprint's Success criteria and show **pass** or **miss** for each, plus whether the Check before you use box is there.
 7. **Improve.** For each miss, propose the **smallest** change, shown as a diff:
    - **A business fact** (a price, a rule, a promise): show the change to the DNA file and heading. Don't edit `business-dna/` yourself; the owner makes it, by hand or with `/dna-check --apply`.
    - **A workflow step** (order, wording, what to ask): edit the skill.

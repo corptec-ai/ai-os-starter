@@ -27,9 +27,9 @@ Apply to jobs@example.com
 
 ## Questions asked (one at a time, each covering both roles)
 
-1. "What's the pay or pay range for each role? (Default: leave it blank for your payroll adviser to fill in.)" → owner pressed Return.
+1. "What's the pay or pay range for each role? (Type Accept for the default: leave it blank for your payroll adviser to fill in.)" → owner typed Accept.
 2. Employment type was already in the notes for both roles, so not asked.
-3. "When would you like them to start? (Default: as soon as possible)" → "Apprentice in January, admin as soon as possible".
+3. "When would you like them to start? (Type Accept for the default: as soon as possible)" → "Apprentice in January, admin as soon as possible".
 
 ## Output (saved to `outputs/job-ad-writer/2026-10-08-apprentice-plumber-and-office-admin.md`)
 

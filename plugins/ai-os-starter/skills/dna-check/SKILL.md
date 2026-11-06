@@ -44,7 +44,7 @@ Score a piece of AI output against the owner's Business DNA and say exactly what
    - **[OUTPUT]:** edit this draft. Say what to change it to, using DNA wording.
    - **[DNA]:** the DNA is missing or unclear. Give the exact line to add and the file and heading it goes under. If the fact isn't known, leave a slot for the owner: `<your rate for X>`.
    - **[SKILL]:** the workflow that made this needs a rule. Name the workflow and the rule in one line.
-6. **With `--apply` only:** take the [DNA] fixes, then for each one show the exact line, the file and the heading, and ask: "Add this to <file> under <heading>? (yes / no, Return for no)". On "yes", append it under that heading. If the line has a slot like `<your rate>`, ask the owner for the value first; never fill it yourself.
+6. **With `--apply` only:** take the [DNA] fixes, then for each one show the exact line, the file and the heading, and ask: "Add this to <file> under <heading>? (yes / no)". On an explicit yes, append it under that heading. Anything other than an explicit yes, including `Accept` and `return`, means no and writes nothing. If the line has a slot like `<your rate>`, ask the owner for the value first; never fill it yourself.
 7. Show the result on screen. With `--save`, also write it to `outputs/dna-check/YYYY-MM-DD-<short-slug>.md`. Never overwrite: add `-2`, `-3` and so on.
 
 ## Approval points

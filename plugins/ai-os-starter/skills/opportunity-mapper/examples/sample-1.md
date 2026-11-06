@@ -1,11 +1,11 @@
 # Example: opportunity map for Northside Plumbing & Gas (fictional)
 
 ## What happened in the session (condensed)
-- No `inbox/kickoff-notes.md`, so the guide started with "What eats most of your time?"
+- `inbox/kickoff-notes.md` was empty, so the guide started with "What eats most of your time?"
 - The owner named three tasks, then the guide prompted area by area (customer service, finance and chasing, marketing, people and rostering, operations and reporting) until there were ten.
 - The guide proposed every score with a reason. The owner changed two: hot water quote replies from Complexity 2 to 3 ("photos make it fiddly"), and the job-card retyping hours from 5 to 4.
 - The top-scoring task, answering gas safety questions by email, scored Risk 5. The guide said: "A wrong answer here could put someone in danger, so it can't be the first workflow. The next one down is hot water quote replies." The owner agreed.
-- The guide ran the scope test out loud, proposed the scope sentence, and asked "Happy with this pick and scope sentence? I'll save the map. (yes / no, Return for no)". The owner typed yes.
+- The guide ran the scope test out loud, proposed the scope sentence, and asked "Happy with this pick and scope sentence? I'll save the map. (yes / no)". The owner typed yes.
 
 ## Output (written to `workflows/opportunity-map.md`)
 

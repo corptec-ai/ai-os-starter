@@ -19,25 +19,25 @@ Here's my draft:
 - **Against competitors:** `[[FILL]]`
 - **Discount rules:** `[[FILL]]`
 
-**AI (question 1 of up to 5):** Your 2025 price list says labour is $165/hr, but both recent quotes use $180/hr. Which is current? (Return for $180, the newer one)
+**AI (question 1 of up to 5):** Your 2025 price list says labour is $165/hr, but both recent quotes use $180/hr. Which is current? (type Accept for $180, the newer one)
 
 **Owner:** $165. The quotes were a mistake by a new estimator.
 
-**AI (question 2):** How many days do customers have to pay? (Return for 14 days from invoice, which your emails mention twice)
+**AI (question 2):** How many days do customers have to pay? (type Accept for 14 days from invoice, which your emails mention twice)
 
-**Owner:** *(Return)*
+**Owner:** Accept
 
-**AI (question 3):** How do you compare with other plumbers on price? (Return for "mid-market on price, top on reliability and paperwork", which is how your website puts it)
+**AI (question 3):** How do you compare with other plumbers on price? (type Accept for "mid-market on price, top on reliability and paperwork", which is how your website puts it)
 
-**Owner:** *(Return)*
+**Owner:** Accept
 
-**AI (question 4):** When is a discount allowed? (Return for "no discounts without approval")
+**AI (question 4):** When is a discount allowed? (type Accept for "no discounts without approval")
 
 **Owner:** 10% for pensioners on residential jobs.
 
-**AI (question 5):** Who approves any other discount? (Return for the Operations Manager)
+**AI (question 5):** Who approves any other discount? (type Accept for the Operations Manager)
 
-**Owner:** *(Return)*
+**Owner:** Accept
 
 **AI:** Here's the summary for `pricing-positioning.md`:
 - Labour $165/hr inc GST (confirmed 2026-11-11; the $180 in two quotes was an error)
@@ -45,7 +45,7 @@ Here's my draft:
 - Mid-market on price, top on reliability · 10% pensioner discount, others need the Operations Manager
 - Still `[[FILL]]`: none
 
-Write `pricing-positioning.md`? (yes / change something)
+Write `pricing-positioning.md`? (yes / no / change something)
 
 **Owner:** yes
 

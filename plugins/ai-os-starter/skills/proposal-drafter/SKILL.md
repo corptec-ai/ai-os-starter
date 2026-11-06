@@ -23,13 +23,15 @@ Draft a quote or short proposal from a customer brief, using only the business's
 - If a file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on with `[CHECK: …]`. If `products-services.md` or `pricing-positioning.md` is unfilled, every price is `[CHECK: price]`.
 
 ## Steps
+Where a question states a default, the typed word `Accept` or `return`, in any capitals, chooses that default.
+
 1. Read the brief. Note what the customer wants, in their words, plus location, size, timing and any budget they mention.
    - For dietary or allergy requests, refer only to an unspecified dietary or allergy request; never repeat a child's name, condition or requested medical information in any output section, including the Check before you use box and Plain-text version.
 2. **Check "What we never do".** If the requested service itself is on that list, don't quote it. Write a polite decline in the summary, suggest an alternative offer if one genuinely exists, and stop: write nothing further (no pricing section). If the prohibited item is only a promise or label, decline it, flag it for the Owner, and continue to quote the matched compliant offer. Stop with no pricing only if no compliant version of the offer remains.
 3. **Match to offers** in `products-services.md`. Use the offer the person named, if any.
    - **If no offer fits, stop.** Say so in one line, and give a short suggested reply to the customer (thank them, say it's not something we do, suggest who might help if the DNA says). Don't stretch an offer to fit.
-   - **Stop and ask** if two offers fit equally: "This could be <A> or <B>. Which one? (Return for <A>)". After that message, write no output file or anything further: do not calculate, compare, quote or present payment terms for either offer.
-   - **If the brief asks for something the matched offer excludes** (e.g. a different system type), don't quote the offer as a like-for-like substitute. **Stop and ask:** "They asked for <X>, which <offer> doesn't include. Draft a short decline offering <offer> as the alternative, or stop here? (Return for the decline)". The decline has no pricing section.
+   - **Stop and ask** if two offers fit equally: "This could be <A> or <B>. Which one? (type Accept for <A>)". After that message, write no output file or anything further: do not calculate, compare, quote or present payment terms for either offer.
+   - **If the brief asks for something the matched offer excludes** (e.g. a different system type), don't quote the offer as a like-for-like substitute. **Stop and ask:** "They asked for <X>, which <offer> doesn't include. Draft a short decline offering <offer> as the alternative, or stop here? (type Accept for the decline)". The decline has no pricing section.
 4. **If the brief is vague,** list the 3 questions to ask before quoting, then draft with gaps.
 5. **Draft the proposal** in the brand voice, with these sections:
    - **What you asked for:** a summary in the customer's own terms.
