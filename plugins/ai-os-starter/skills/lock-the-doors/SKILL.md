@@ -24,7 +24,7 @@ Connecting a tool gives the AI new actions: read, but also send, reply, post and
    - **Leave as is:** read, get, list, search, find.
    - **Not sure?** Put it in **Never**. It's easy to relax a rule later, and impossible to unsend an email.
 3. **Show the plan** before changing anything. One short table per connector (template: `templates/output.md`): the action in plain words, the tool's short name, and the rule. Then give totals ("12 never, 3 ask first, 20 left as is") and ask:
-   **"Add these rules to your safety file? (yes / change one / no)"**. Anything other than an explicit yes, including `Accept`, means no and writes nothing.
+   **"Add these rules to your safety file? (yes / change one / no)"**. Only the word `yes`, in any capitals, writes the rules. Anything else, including `Accept`, means no and writes nothing.
 4. **Write the rules,** after a "yes" (the safety file's own ask-first rule will prompt as well):
    - Add each full tool name, exactly as it appears (for example `mcp__<connector>__send_mail`), to `deny` for Never or `ask` for Ask first.
    - **Keep every existing rule.** Add to the lists; don't reorder, remove or weaken anything, and don't duplicate a rule that's already there.

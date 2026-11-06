@@ -45,10 +45,10 @@ Where a question states a default, tell the person to type the word Accept to ch
    5. **The input is available as a file or a connected tool by Day 2.**
    If an item fails, propose a cut-down version and test again.
 6. **Write the scope sentence:** "When ___ arrives, produce ___, and I approve it before ___." Fill every blank with real words from their pick, and tell the owner to replace anything that isn't their own. X, Y or a blank is not an answer: if they type one, ask what actually arrives and what it produces. Show it with the pick, why it was chosen, and what's deliberately out of scope.
-7. **Confirm, then write.** Ask: "Happy with this pick and scope sentence? I'll save the map. (yes / no)". Write the file only after an explicit yes. Then show a 3-line summary and the file path.
+7. **Confirm, then write.** Ask: "Happy with this pick and scope sentence? I'll save the map. (yes / no)". Write the file only after the word `yes`. Then show a 3-line summary and the file path.
 
 ## Approval points
-- **Stop and ask before writing the file:** the owner confirms the pick and the scope sentence. Default is **no**: anything other than an explicit yes, including `Accept`, means no and writes nothing. Any change goes back to step 5.
+- **Stop and ask before writing the file:** the owner confirms the pick and the scope sentence. Default is **no**: only the word `yes`, in any capitals, saves it. Anything else, including `Accept`, means no and writes nothing. Any change goes back to step 5.
 - The owner can change any proposed score or label before the table is final.
 
 ## Output

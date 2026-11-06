@@ -49,7 +49,7 @@ Where a question states a default, tell the person to type the word Accept to ch
 ## Approval points
 - **Before writing each DNA file,** show its summary and get a "yes". The safety file also asks before any change to `business-dna/`.
 - **Before overwriting a file that has no `[[FILL]]` left,** show what will change, line by line ("was … / now …"), and ask again.
-- Default for any write question is **no**: anything other than an explicit yes, including `Accept`, means no and writes nothing. Show the summary again.
+- Default for any write question is **no**: only the word `yes`, in any capitals, writes. Anything else, including `Accept`, means no and writes nothing. Show the summary again.
 
 ## Automated test runs
 If the request includes "This is an automated test run", don't wait for answers.
