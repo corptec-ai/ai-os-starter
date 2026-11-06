@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.5.1 (workshop fixes)
+- Fixes from the 2 Nov dry run and the workshop run sheet.
+- Workspace `CLAUDE.md`: no more sample offer in the Business DNA section; says plainly that Claude can list and read the files in this folder; flags any irreversible action first.
+- `business-dna-interview`: the closing summary now asks you to open each of the five files and check them.
+- `workspace-check`: sample-business content no longer counts as filled. An empty `kickoff-notes.md` doesn't count as material.
+- `opportunity-mapper`: real words in the scope sentence, aim for 10 scored tasks, one optional question on your role.
+- `workflow-blueprint`: checks for Plan mode first and asks through the question box. `sample-data-maker`: offers fixes in a question box.
+- `test-pack` and `go-live-runbook`: find the blueprint for a renamed skill, such as a `-v2` copy. `go-live-runbook`: offers `sandbox/sample-emails.md` when there's no real item.
+- Workspace template: ships an empty `inbox/kickoff-notes.md`. `START-HERE.html` gives the scope sentence with blanks to fill in. `sandbox/README.md` no longer invites you to copy the example Business DNA.
+- Pressing the key on a blank message does nothing in the desktop app, so eleven guides now ask you to type: `Accept` takes the stated default, anything else that isn't your own answer asks again, and `skip` carries on without an answer. Questions that write default to no: only the word yes writes.
+- New fallback install: `dist/ai-os-starter-plugin.zip`, built by `scripts/build-plugin-zip.sh` and checked on every pull request.
+
 ## 0.5.0 (library hardening)
 - All ten ready-made workflows hardened with 80 new test cases (normal, messy, sensitive, edge and adversarial; 8 per workflow) run 3 times each and graded against each workflow's rules. Final: every workflow at 22/24 or better, with no Never-list breaches.
 - Fixes include: never repeating a child's name or medical details (proposal-drafter); holding replies that name the documented decision-maker and never claim an email was passed on (email-reply-drafter); stop-and-ask only when the Business DNA doesn't settle a safety or order question, with verb-first steps (sop-writer); no unsupported claims and DNA-aware client confidentiality (social-post-writer); no figures nobody stated, and only assigned actions (meeting-to-actions); no invented deadlines (weekly-business-brief); red-flag leads only in the red-flag section (enquiry-triage); a stop means stop (invoice-follow-up); each specific concern addressed and no personal details (review-responder).

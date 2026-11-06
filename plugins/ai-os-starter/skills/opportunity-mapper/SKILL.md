@@ -9,7 +9,7 @@ Help the owner list the recurring work in their business, score it, and pick **o
 
 ## Input
 - Anything in `$ARGUMENTS`: a list of tasks, or a note like "start with quoting".
-- The three candidate tasks from the kick-off call, if `inbox/kickoff-notes.md` exists. Start the list with them and say so in one line.
+- The three candidate tasks from the kick-off call, if `inbox/kickoff-notes.md` has anything in it (the kit ships it empty). Start the list with them and say so in one line.
 - If there's nothing, start with: "Let's list the jobs that come round every week. What eats most of your time?"
 
 ## What it reads
@@ -18,7 +18,10 @@ Help the owner list the recurring work in their business, score it, and pick **o
 - If a file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on with `[CHECK: …]` placeholders.
 
 ## Steps
-1. **List ten tasks.** Start with the kick-off candidates. Then prompt by area, one area at a time, until there are ten: sales and enquiries · customer service · quoting and admin · finance and chasing · marketing · people and rostering · operations and reporting. For each task ask one question: "Who does it, how often, and about how long each time?" Offer a guess from the DNA they can accept with Return.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
+
+1. **List ten tasks.** First ask one optional question: "What's your role in the business? (type skip to carry on without it)". If they answer, lean your suggested tasks and your recommendation among the top three toward work that role does, and say so in one line. It never changes a score or the risk rules.
+   Aim for 10 scored tasks. Start with the kick-off candidates, but they're only a start. Then prompt by area, one area at a time, until there are ten: sales and enquiries · customer service · quoting and admin · finance and chasing · marketing · people and rostering · operations and reporting. For each task ask one question: "Who does it, how often, and about how long each time?" Offer a guess from the DNA they can accept by typing the word Accept, shown as "(type Accept for <guess>)".
 2. **Label each task:**
    - **Eliminate:** it shouldn't exist at all (a fix to the process, not AI).
    - **Automate:** AI does it, a human approves.
@@ -34,18 +37,18 @@ Help the owner list the recurring work in their business, score it, and pick **o
 4. **Show the ranked table**, highest score first. Ties: lower risk first, then higher value. Then show the **top three**: the three highest-scoring tasks that aren't Eliminate and don't have a risk of 5. For each, give a one-line **first version** that passes the scope test, e.g. "Draft replies to hot water quote requests from the website form."
    - **Risk 5 is never picked**, even if it tops the table. Say why in one line ("a mistake here could hurt someone or breach compliance") and move to the next one down.
    - If a top task is too big ("handle all customer service"), cut it to its first approval point ("draft replies to booking-change emails").
-5. **Ask the owner to pick one** (default: the highest-scoring of the top three). Then run the **scope test** out loud. All five must pass:
+5. **Ask the owner to pick one** (default: the highest-scoring of the top three, or the one you recommended for their role). Then run the **scope test** out loud. All five must pass:
    1. **One trigger:** one thing arrives that starts it.
    2. **One main output:** it produces one thing.
    3. **Six steps or fewer.**
    4. **A human approves before anything leaves the business.**
    5. **The input is available as a file or a connected tool by Day 2.**
    If an item fails, propose a cut-down version and test again.
-6. **Write the scope sentence:** "When ___ arrives, produce ___, and I approve it before ___." Show it with the pick, why it was chosen, and what's deliberately out of scope.
-7. **Confirm, then write.** Ask: "Happy with this pick and scope sentence? I'll save the map. (yes / no, Return for no)". Write the file only after a yes. Then show a 3-line summary and the file path.
+6. **Write the scope sentence:** "When ___ arrives, produce ___, and I approve it before ___." Fill every blank with real words from their pick, and tell the owner to replace anything that isn't their own. X, Y or a blank is not an answer: if they type one, ask what actually arrives and what it produces. Show it with the pick, why it was chosen, and what's deliberately out of scope.
+7. **Confirm, then write.** Ask: "Happy with this pick and scope sentence? I'll save the map. (yes / no)". Write the file only after the word `yes`. Then show a 3-line summary and the file path.
 
 ## Approval points
-- **Stop and ask before writing the file:** the owner confirms the pick and the scope sentence. Default is **no**: Return means "not yet", not "save it". Any change goes back to step 5.
+- **Stop and ask before writing the file:** the owner confirms the pick and the scope sentence. Default is **no**: only the word `yes`, in any capitals, saves it. Anything else, including `Accept`, means no and writes nothing. Any change goes back to step 5.
 - The owner can change any proposed score or label before the table is final.
 
 ## Output

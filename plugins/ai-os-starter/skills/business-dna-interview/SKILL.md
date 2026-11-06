@@ -8,7 +8,7 @@ description: Interviews the business owner and drafts or updates their Business 
 Turn what the owner already has (the materials in `inbox/` plus their answers) into the five Business DNA files, in about 40 minutes, without the owner facing a blank page. **Draft first, ask second.** The AI drafts every heading from their materials, then asks only about the gaps.
 
 ## Input
-- `inbox/`, read in full: website copy, price lists, quotes, proposals, emails, brand guides, procedures. PDF, Word and pasted text all count. Ignore `inbox/README.md`. List and read files with the file tools, never a shell command.
+- `inbox/`, read in full: website copy, price lists, quotes, proposals, emails, brand guides, procedures. PDF, Word and pasted text all count. Ignore `inbox/README.md` and an empty `inbox/kickoff-notes.md`: neither counts as material. List and read files with the file tools, never a shell command.
 - Word files: ask the owner to save as PDF or paste the text (reading .docx needs a permission prompt).
 - Optionally, one DNA file named in `$ARGUMENTS` to redo just that one: `brand-voice` (or "voice"), `ideal-customers` ("customers"), `products-services` ("products", "services"), `pricing-positioning` ("pricing"), `business-rules` ("rules"). With no argument, do all five in order.
 - The existing `business-dna/*.md`. On a re-run, **update rather than restart**: keep what's filled, work on the `[[FILL]]` headings and anything the new materials change.
@@ -18,8 +18,10 @@ Turn what the owner already has (the materials in `inbox/` plus their answers) i
 - A sources log at `outputs/business-dna-interview/YYYY-MM-DD-sources.md`. Never overwrite: if the name is taken, add `-2`, `-3` and so on.
 
 ## Steps
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
+
 1. **Read `inbox/`.** Say what you found in 3 lines at most, e.g. "Your website, a 2025 price list, 4 quotes and 5 customer emails."
-   - **If `inbox/` is empty,** ask: "There's nothing in your inbox folder yet. What's your website address? (Return to skip and work from the interview alone)". If they give a web address and this session can open web pages, read the public pages only (home, services, about, pricing). If it can't, ask them to paste the text instead.
+   - **If `inbox/` is empty,** ask: "There's nothing in your inbox folder yet. What's your website address? (type skip to carry on without it)". If they give a web address and this session can open web pages, read the public pages only (home, services, about, pricing). If it can't, ask them to paste the text instead.
    - **If the materials cover more than one brand,** ask which brand this workspace is for. One workspace, one brand. Set the others aside.
    - **If the business is in a regulated industry** (health, finance, legal), note it now for step 6.
 2. **Work through the files in this order:** brand voice → ideal customers → products and services → pricing → business rules. For each file:
@@ -27,7 +29,7 @@ Turn what the owner already has (the materials in `inbox/` plus their answers) i
    - **Show the draft in short form:** one or two lines per heading, with gaps shown as `[[FILL]]`.
 3. **Ask gap questions, one at a time.** Ask only where the materials are silent or contradict each other.
    - **At most 5 questions per file.** If a gap is still open after 5, leave `[[FILL]]` and move on. The cap limits **questions asked**, not **answers used**: anything the owner has already told you (in their materials, an earlier reply, or answers given up front) goes straight into the file without spending a question. The session is timed. Keep the whole interview **under 25 questions**, counting the website and brand questions.
-   - **Every question has a suggested answer** they can accept with Return, e.g. "Your 2025 price list says $165/hr but two quotes use $180. Which is current? (Return for $180, the newer one)".
+   - **Every question has a suggested answer** they can accept by typing the word Accept, e.g. "Your 2025 price list says $165/hr but two quotes use $180. Which is current? (type Accept for $180, the newer one)".
    - **Contradictions** (old versus new prices, two different payment terms): always ask. Record the answer and today's date in the file, e.g. "Labour $180/hr inc. GST (confirmed 2026-11-11)".
    - If the owner says they'd rather write a file themselves, let them. Afterwards offer to tidy it to the headings, changing nothing else.
 4. **Brand voice comes from evidence.**
@@ -40,14 +42,14 @@ Turn what the owner already has (the materials in `inbox/` plus their answers) i
    - Use roles, never names: "Refunds: Operations Manager".
    - **Never invent compliance obligations.** "Legal and compliance notes" holds only what the owner states or their own materials say; otherwise `[[FILL]]`.
    - **Regulated industry:** add "Always check with a human: anything that could be advice", and tell them you've added it.
-7. **Write each file only after a "yes".** Show a summary (what's filled, what's still `[[FILL]]`), then ask "Write <file>? (yes / change something)". Keep each file under about 80 lines.
+7. **Write each file only after a "yes".** Show a summary (what's filled, what's still `[[FILL]]`), then ask "Write <file>? (yes / no / change something)". Keep each file under about 80 lines.
 8. **Write the sources log**: for every section, which inbox file (or "owner's answer") each fact came from. It must contain the exact line `Questions asked: <n>`, where n counts every question put to the owner, including the website and brand questions. A merged follow-up ("and who approves it?") counts as its own question.
-9. **Close with a summary:** what's filled, what's still `[[FILL]]`, the sources log path, then: "Type `/context` to see these load."
+9. **Close with a summary:** what's filled, what's still `[[FILL]]`, the sources log path, then: "Open each of the five files in `business-dna/`, check your answers are there, fill in any `[[FILL]]` still left and fix anything wrong."
 
 ## Approval points
 - **Before writing each DNA file,** show its summary and get a "yes". The safety file also asks before any change to `business-dna/`.
 - **Before overwriting a file that has no `[[FILL]]` left,** show what will change, line by line ("was … / now …"), and ask again.
-- Default for any write question is **no**: Return means "show me again", not "write it".
+- Default for any write question is **no**: only the word `yes`, in any capitals, writes. Anything else, including `Accept`, means no and writes nothing. Show the summary again.
 
 ## Automated test runs
 If the request includes "This is an automated test run", don't wait for answers.
