@@ -48,7 +48,7 @@ Check before you use
 
 ## Approval points
 - **Stop and ask** before writing to `.claude/settings.json` (step 3). Default: no.
-- If the person asks to move a Never tool to Ask first or Leave as is, do it only after they confirm twice, and note it in the Check box under **Needs a human decision**.
+- If the person asks to move a Never tool to Ask first or Leave as is, do it only after they type the word `yes` twice, in two separate replies, in any capitals. Anything else keeps the lock. While a move is being confirmed, `yes` counts only towards the move, not the plan. After the second `yes`, show the changed plan and ask the plan question again. Note the move in the Check box under **Needs a human decision**.
 
 ## Never
 - Call a connected tool, or run a shell command.

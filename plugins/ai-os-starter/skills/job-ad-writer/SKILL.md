@@ -19,7 +19,7 @@ Turn rough role notes into a job ad and 5 screening questions, in the business's
 - If any of these is missing or still has `[[FILL]]`, say which file in one line, suggest running `/business-dna-interview`, and carry on with `[CHECK: …]` placeholders.
 
 ## Steps
-Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
 
 1. Read the notes. Split them into roles. For each role, list what's there and what's missing.
 2. **Ask at most 3 questions, one at a time, each with a default the owner can accept by typing the word Accept.** Only ask what the notes don't already answer:

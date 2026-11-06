@@ -19,7 +19,7 @@ Turn an approved workflow blueprint into a working skill the owner can run as `/
 - If a cited DNA file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on. The rule stays in the skill as a reference.
 
 ## Steps
-Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
 
 1. **Check the blueprint is ready.** It needs all nine headings: Trigger, Inputs, Steps, Business rules applied, Approval points, Output, Success criteria, Out of scope, Failure handling. It needs six steps or fewer, and at least one approval point. If anything is missing, list what in plain words and ask: "Run `/workflow-blueprint` again to fix this? (type Accept for yes)". **Don't guess or fill gaps yourself.** Stop here.
 2. **Check the name.** If `.claude/skills/<name>/` already exists, ask: "There's already a skill called <name>. Make a new version (`<name>-v2`), or update this one and show you the changes? (type Accept for a new version)". Never overwrite silently.

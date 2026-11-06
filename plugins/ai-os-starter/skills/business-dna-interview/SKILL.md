@@ -18,7 +18,7 @@ Turn what the owner already has (the materials in `inbox/` plus their answers) i
 - A sources log at `outputs/business-dna-interview/YYYY-MM-DD-sources.md`. Never overwrite: if the name is taken, add `-2`, `-3` and so on.
 
 ## Steps
-Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
 
 1. **Read `inbox/`.** Say what you found in 3 lines at most, e.g. "Your website, a 2025 price list, 4 quotes and 5 customer emails."
    - **If `inbox/` is empty,** ask: "There's nothing in your inbox folder yet. What's your website address? (type skip to carry on without it)". If they give a web address and this session can open web pages, read the public pages only (home, services, about, pricing). If it can't, ask them to paste the text instead.

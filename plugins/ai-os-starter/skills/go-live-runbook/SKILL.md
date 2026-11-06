@@ -21,7 +21,7 @@ Write the one page that turns the custom workflow into a business system rather 
 - Anything missing becomes `[CHECK: …]`. Never stop with an error.
 
 ## Steps
-Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
 
 1. **Pre-fill** everything you can from the files above.
 2. **Ask at most six questions, one at a time,** each with a default the owner can accept by typing the word Accept, shown as "(type Accept for <default>)". Skip any the files already answer.

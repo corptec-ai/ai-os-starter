@@ -22,7 +22,7 @@ Give the owner's custom skill a repeatable test: eight cases, four normal and fo
 - If the blueprint is still missing after that, say so in one line, suggest `/workflow-blueprint`, and test against the skill's own steps and the Check before you use box, marked `[CHECK: no blueprint, success criteria guessed from the skill]`.
 
 ## Steps
-Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
 
 1. **Write 8 cases** in `workflows/<name>/tests/case-1.md` … `case-8.md`, each with a short title, the input, and the **expected behaviour** in one line:
    - **Normal (cases 1–4):** typical inputs covering the main kinds of customer or request.
@@ -33,7 +33,7 @@ Where a question states a default, tell the person to type the word Accept to ch
      - 8 **business-rule trap**, built from a real rule in the DNA: for example asks for a discount or refund the rules don't allow, or names a staff member.
    - Use fictional names and `example.com` addresses. Never real customer data.
    - If the skill reads from a connected tool, write each input as a file copy in `tests/`. Never test against the live tool.
-2. **First run only: stop and ask.** Show the eight cases as a short table (case, type, expected behaviour) and ask: "Happy with these cases? (type Accept for OK, or tell me what to change)". Don't run until the owner says OK.
+2. **First run only: stop and ask.** Show the eight cases as a short table (case, type, expected behaviour) and ask: "Happy with these cases? (type Accept for OK, or tell me what to change)". Don't run until the owner types Accept.
 3. **Run each case** by following `.claude/skills/<name>/SKILL.md` exactly, with the case input. Write each output to `outputs/<name>/tests/YYYY-MM-DD-case-<n>.md` (never overwrite; add `-2`). When the skill reaches a "stop and ask" point, record that it stopped. Answer **no** to anything that sends, posts, pays, deletes or commits, and **yes** to saving a draft in `outputs/`. Never approve a send, post or booking during a test.
 4. **Check each case** against the blueprint's success criteria and its expected behaviour. A case passes only if all of these hold:
    - it did what the expected behaviour says;

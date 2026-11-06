@@ -18,7 +18,7 @@ Help the owner list the recurring work in their business, score it, and pick **o
 - If a file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on with `[CHECK: …]` placeholders.
 
 ## Steps
-Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
 
 1. **List ten tasks.** First ask one optional question: "What's your role in the business? (type skip to carry on without it)". If they answer, lean your suggested tasks and your recommendation among the top three toward work that role does, and say so in one line. It never changes a score or the risk rules.
    Aim for 10 scored tasks. Start with the kick-off candidates, but they're only a start. Then prompt by area, one area at a time, until there are ten: sales and enquiries · customer service · quoting and admin · finance and chasing · marketing · people and rostering · operations and reporting. For each task ask one question: "Who does it, how often, and about how long each time?" Offer a guess from the DNA they can accept by typing the word Accept, shown as "(type Accept for <guess>)".

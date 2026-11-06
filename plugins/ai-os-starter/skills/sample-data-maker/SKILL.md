@@ -20,7 +20,7 @@ Make five realistic but **fictional** inputs for the owner's workflow, so they c
 - If a file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on with plausible, generic samples for that industry, marked `[CHECK: DNA not filled; samples are generic]` in the README.
 
 ## Steps
-Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
 
 1. **Confirm the format in one line**, with a default they can accept by typing the word Accept, e.g. "Five customer emails asking for hot water quotes, one markdown file each. OK? (type Accept for yes)" If the input is tabular (an export, a list, a spreadsheet), the default is CSV.
 2. **Plan the five samples:**
