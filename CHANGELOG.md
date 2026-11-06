@@ -7,9 +7,9 @@
 - `workspace-check`: sample-business content no longer counts as filled. An empty `kickoff-notes.md` doesn't count as material.
 - `opportunity-mapper`: real words in the scope sentence, aim for 10 scored tasks, one optional question on your role.
 - `workflow-blueprint`: checks for Plan mode first and asks through the question box. `sample-data-maker`: offers fixes in a question box.
-- `test-pack`: finds the blueprint for a renamed skill, such as a `-v2` copy. `go-live-runbook`: offers `sandbox/sample-emails.md` when there's no real item.
-- Workspace template: ships an empty `inbox/kickoff-notes.md`.
-- Pressing the key on a blank message does nothing in the desktop app, so eleven guides now ask you to type: `Accept` (or `return`) takes the stated default, and `skip` carries on without an answer. Questions that write default to no: only an explicit yes writes.
+- `test-pack` and `go-live-runbook`: find the blueprint for a renamed skill, such as a `-v2` copy. `go-live-runbook`: offers `sandbox/sample-emails.md` when there's no real item.
+- Workspace template: ships an empty `inbox/kickoff-notes.md`. `START-HERE.html` gives the scope sentence with blanks to fill in. `sandbox/README.md` no longer invites you to copy the example Business DNA.
+- Pressing the key on a blank message does nothing in the desktop app, so eleven guides now ask you to type: `Accept` takes the stated default, and `skip` carries on without an answer. Questions that write default to no: only an explicit yes writes.
 - New fallback install: `dist/ai-os-starter-plugin.zip`, built by `scripts/build-plugin-zip.sh` and checked on every pull request.
 
 ## 0.5.0 (library hardening)

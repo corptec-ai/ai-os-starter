@@ -18,7 +18,7 @@ Help the owner list the recurring work in their business, score it, and pick **o
 - If a file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on with `[CHECK: …]` placeholders.
 
 ## Steps
-Where a question states a default, the typed word `Accept` or `return`, in any capitals, chooses that default.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
 
 1. **List ten tasks.** First ask one optional question: "What's your role in the business? (type skip to carry on without it)". If they answer, lean your suggested tasks and your recommendation among the top three toward work that role does, and say so in one line. It never changes a score or the risk rules.
    Aim for 10 scored tasks. Start with the kick-off candidates, but they're only a start. Then prompt by area, one area at a time, until there are ten: sales and enquiries · customer service · quoting and admin · finance and chasing · marketing · people and rostering · operations and reporting. For each task ask one question: "Who does it, how often, and about how long each time?" Offer a guess from the DNA they can accept by typing the word Accept, shown as "(type Accept for <guess>)".
@@ -48,7 +48,7 @@ Where a question states a default, the typed word `Accept` or `return`, in any c
 7. **Confirm, then write.** Ask: "Happy with this pick and scope sentence? I'll save the map. (yes / no)". Write the file only after an explicit yes. Then show a 3-line summary and the file path.
 
 ## Approval points
-- **Stop and ask before writing the file:** the owner confirms the pick and the scope sentence. Default is **no**: anything other than an explicit yes, including `Accept` and `return`, means no and writes nothing. Any change goes back to step 5.
+- **Stop and ask before writing the file:** the owner confirms the pick and the scope sentence. Default is **no**: anything other than an explicit yes, including `Accept`, means no and writes nothing. Any change goes back to step 5.
 - The owner can change any proposed score or label before the table is final.
 
 ## Output

@@ -22,7 +22,7 @@ Ask every question through the question box (AskUserQuestion), one at a time, no
 - If a DNA file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on with `[CHECK: …]` placeholders.
 
 ## Steps
-Where a question states a default, the typed word `Accept` or `return`, in any capitals, chooses that default.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
 
 1. **Check the scope.** Run the scope test: one trigger, one main output, six steps or fewer, a human approves before anything leaves the business, input available by Day 2. If it does too much, say so and cut it back to its first approval point before drafting.
 2. **Name it.** Propose a short kebab-case name, e.g. `hot-water-quote-reply`. It becomes the folder and, later, the skill name.

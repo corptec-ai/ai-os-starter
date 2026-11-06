@@ -22,7 +22,7 @@ Give the owner's custom skill a repeatable test: eight cases, four normal and fo
 - If the blueprint is still missing after that, say so in one line, suggest `/workflow-blueprint`, and test against the skill's own steps and the Check before you use box, marked `[CHECK: no blueprint, success criteria guessed from the skill]`.
 
 ## Steps
-Where a question states a default, the typed word `Accept` or `return`, in any capitals, chooses that default.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
 
 1. **Write 8 cases** in `workflows/<name>/tests/case-1.md` … `case-8.md`, each with a short title, the input, and the **expected behaviour** in one line:
    - **Normal (cases 1–4):** typical inputs covering the main kinds of customer or request.

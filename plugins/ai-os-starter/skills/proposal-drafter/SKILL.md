@@ -23,7 +23,7 @@ Draft a quote or short proposal from a customer brief, using only the business's
 - If a file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on with `[CHECK: …]`. If `products-services.md` or `pricing-positioning.md` is unfilled, every price is `[CHECK: price]`.
 
 ## Steps
-Where a question states a default, the typed word `Accept` or `return`, in any capitals, chooses that default.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
 
 1. Read the brief. Note what the customer wants, in their words, plus location, size, timing and any budget they mention.
    - For dietary or allergy requests, refer only to an unspecified dietary or allergy request; never repeat a child's name, condition or requested medical information in any output section, including the Check before you use box and Plain-text version.

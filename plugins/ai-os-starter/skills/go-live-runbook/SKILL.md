@@ -9,7 +9,8 @@ Write the one page that turns the custom workflow into a business system rather 
 
 ## Input
 - The skill name in `$ARGUMENTS` (for example `hot-water-quote-reply`). If none is given, use the newest custom skill in `.claude/skills/` and confirm: "Write the runbook for **<name>**? (type Accept for yes)".
-- If there's no blueprint or skill for that name, say so and suggest `/workflow-blueprint` or `/skill-builder`. Then stop.
+- **Renamed skill (a `-v2` copy, for example):** if `workflows/<name>/blueprint.md` isn't there, look under the name without its version ending (`hot-water-quote-reply-v2` → `workflows/hot-water-quote-reply/blueprint.md`), then in any `workflows/*/blueprint.md` whose folder name or scope sentence matches the skill. Use what you find and say which one in one line. If more than one fits, ask which. The runbook still goes under the skill's own name, `workflows/<name>/`.
+- If there's still no blueprint, or there's no skill for that name, say so and suggest `/workflow-blueprint` or `/skill-builder`. Then stop.
 
 ## What it reads
 - `workflows/<name>/blueprint.md`: Trigger, Inputs, Approval points, Out of scope, Success criteria.
@@ -20,7 +21,7 @@ Write the one page that turns the custom workflow into a business system rather 
 - Anything missing becomes `[CHECK: …]`. Never stop with an error.
 
 ## Steps
-Where a question states a default, the typed word `Accept` or `return`, in any capitals, chooses that default.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine.
 
 1. **Pre-fill** everything you can from the files above.
 2. **Ask at most six questions, one at a time,** each with a default the owner can accept by typing the word Accept, shown as "(type Accept for <default>)". Skip any the files already answer.
