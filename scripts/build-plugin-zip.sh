@@ -21,8 +21,8 @@ check() {
     return 1
   fi
   # .DS_Store is ignored above because Finder can drop one in a local folder, where
-  # git ignores it and the build skips it. It must never be in the zip itself.
-  if unzip -Z1 "$zipfile" | grep -E '(^|/)\.DS_Store$' >&2; then
+  # git ignores it and the build skips it. It must never be in the zip itself, as a file or a folder.
+  if unzip -Z1 "$zipfile" | grep -E '(^|/)\.DS_Store(/|$)' >&2; then
     echo "FAIL: $zipfile contains .DS_Store. Run scripts/build-plugin-zip.sh and commit the result." >&2
     return 1
   fi
