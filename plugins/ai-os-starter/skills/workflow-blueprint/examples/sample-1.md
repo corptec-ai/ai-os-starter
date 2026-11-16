@@ -10,7 +10,7 @@ A condensed run. The full blueprint this produces is in the workspace at `sandbo
 Scope test: one trigger, one output, about five steps, approval before sending, input available as files by Day 2. Pass.
 
 ## Name
-Proposed `hot-water-quote-reply`. Owner pressed Return.
+Proposed `hot-water-quote-reply`. Owner typed Accept.
 
 ## Interview (six questions, defaults offered from the DNA)
 1. **What arrives, and where?** Website form and office inbox. Owner: "Save them as files for now." → design for `inbox/hot-water/`; note "connect the office inbox in Session 6".

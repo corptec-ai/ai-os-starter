@@ -58,7 +58,7 @@ The file holds one draft:
 
 **AI:** Add this to `products-services.md` under "Our offers"?
 "Relocating a hot water unit: quoted separately after a site visit."
-(yes / no, Return for no)
+(yes / no)
 
 **Owner:** yes
 

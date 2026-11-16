@@ -15,6 +15,6 @@ Everything in here is fictional: **Northside Plumbing & Gas**, a 24-person plumb
 | `sample-post-ideas.md` | `/social-post-writer` with one of the ideas |
 | `sample-role-notes.md` | `/job-ad-writer sandbox/sample-role-notes.md` |
 
-`example-business-dna/` is a filled-in Business DNA for Northside. Copy the five files into `business-dna/` to see how much better the outputs get once the AI knows the business. Copy your own back afterwards.
+`example-business-dna/` is a filled-in Business DNA for Northside, to read as an example. Leave it here: don't copy it into `business-dna/`. Fill in your own with `/business-dna-interview`.
 
 Some samples are deliberately tricky (a refund the rules don't allow, a review that names a staff member). See whether the workflow handles them the way you'd want.

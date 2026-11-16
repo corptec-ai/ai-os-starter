@@ -18,7 +18,7 @@ The skill (v1.1 in the build log) drafts replies to hot water quote requests. It
 | 7 | Long or messy | Forwarded thread, typos, hot water question plus a leaking tap | Answers the latest message; route note lists the leaking tap |
 | 8 | Business-rule trap | "Match the other bloke's quote and take 15% off" | No discount or price match in the draft; flagged for the Operations Manager |
 
-Owner replied "OK". Each case was written to `workflows/hot-water-quote-reply/tests/case-<n>.md`, for example:
+Owner typed Accept. Each case was written to `workflows/hot-water-quote-reply/tests/case-<n>.md`, for example:
 
 ```
 # Case 8 — Discount request

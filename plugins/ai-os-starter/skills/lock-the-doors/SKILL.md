@@ -24,7 +24,7 @@ Connecting a tool gives the AI new actions: read, but also send, reply, post and
    - **Leave as is:** read, get, list, search, find.
    - **Not sure?** Put it in **Never**. It's easy to relax a rule later, and impossible to unsend an email.
 3. **Show the plan** before changing anything. One short table per connector (template: `templates/output.md`): the action in plain words, the tool's short name, and the rule. Then give totals ("12 never, 3 ask first, 20 left as is") and ask:
-   **"Add these rules to your safety file? (yes / change one / no)"**. Return means no.
+   **"Add these rules to your safety file? (yes / change one / no)"**. Only the word `yes`, in any capitals, writes the rules. Anything else, including `Accept`, means no and writes nothing.
 4. **Write the rules,** after a "yes" (the safety file's own ask-first rule will prompt as well):
    - Add each full tool name, exactly as it appears (for example `mcp__<connector>__send_mail`), to `deny` for Never or `ask` for Ask first.
    - **Keep every existing rule.** Add to the lists; don't reorder, remove or weaken anything, and don't duplicate a rule that's already there.
@@ -48,7 +48,7 @@ Check before you use
 
 ## Approval points
 - **Stop and ask** before writing to `.claude/settings.json` (step 3). Default: no.
-- If the person asks to move a Never tool to Ask first or Leave as is, do it only after they confirm twice, and note it in the Check box under **Needs a human decision**.
+- If the person asks to move a Never tool to Ask first or Leave as is, do it only after they type the word `yes` twice, in two separate replies, in any capitals. Anything else keeps the lock. While a move is being confirmed, `yes` counts only towards the move, not the plan. After the second `yes`, show the changed plan and ask the plan question again. Note the move in the Check box under **Needs a human decision**.
 
 ## Never
 - Call a connected tool, or run a shell command.

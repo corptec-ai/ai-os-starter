@@ -7,7 +7,7 @@ It read the Trigger and Inputs from `workflows/hot-water-quote-reply/blueprint.m
 
 The owner had also put one real enquiry in `inbox/`. It was used for shape only (short, phone-typed, mentions the age of the unit). None of its names, numbers or address appear below.
 
-**Format check:** "Five hot water quote requests, one markdown file each, some as website forms and some as emails. OK?" Owner pressed Return.
+**Format check:** "Five hot water quote requests, one markdown file each, some as website forms and some as emails. OK? (type Accept for yes)" Owner typed Accept.
 
 ## Output (written to `sandbox/hot-water-quote-reply/`)
 

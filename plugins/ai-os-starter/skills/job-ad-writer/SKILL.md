@@ -19,11 +19,13 @@ Turn rough role notes into a job ad and 5 screening questions, in the business's
 - If any of these is missing or still has `[[FILL]]`, say which file in one line, suggest running `/business-dna-interview`, and carry on with `[CHECK: …]` placeholders.
 
 ## Steps
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
+
 1. Read the notes. Split them into roles. For each role, list what's there and what's missing.
-2. **Ask at most 3 questions, one at a time, each with a default the owner can accept by pressing Return.** Only ask what the notes don't already answer:
-   - "What's the pay or pay range? (Default: leave it blank for your payroll adviser to fill in.)"
-   - "Is it full-time, part-time, casual or fixed-term? (Default: [what the notes suggest])"
-   - "When would you like them to start? (Default: as soon as possible)"
+2. **Ask at most 3 questions, one at a time, each with a default the owner can accept by typing the word Accept.** Only ask what the notes don't already answer:
+   - "What's the pay or pay range? (Type Accept for the default: leave it blank for your payroll adviser to fill in.)"
+   - "Is it full-time, part-time, casual or fixed-term? (Type Accept for the default: [what the notes suggest])"
+   - "When would you like them to start? (Type Accept for the default: as soon as possible)"
    With more than one role, ask each question once and cover every role in it. Never ask more than these three. Anything else missing becomes `[CHECK: …]`.
 3. **For each role**, write the ad under these 7 headings, in this order:
    1. **About us** — from `brand-voice.md` "Who we are" and `products-services.md`. 2–3 lines.

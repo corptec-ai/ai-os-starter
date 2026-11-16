@@ -28,6 +28,12 @@ Then install **ai-os-starter**. Or, in Claude Code:
 
 **3. Check it.** Type `/workspace-check` and press Return.
 
+### Fallback install
+
+If add marketplace doesn't work or isn't there, download the plugin zip and add it under **+** → Plugins:
+
+https://github.com/corptec-ai/ai-os-starter/raw/main/dist/ai-os-starter-plugin.zip
+
 ## What's inside
 
 ### Ready-made workflows
@@ -61,7 +67,7 @@ Then install **ai-os-starter**. Or, in Claude Code:
 | `/test-pack` | Tests your workflow on normal and unusual cases |
 | `/go-live-runbook` | Writes the one-page runbook: owner, checks, how to switch it off |
 
-*Version 0.5.0: the full workshop kit, with ten guides; all ten workflows hardened.*
+*Version 0.5.1: the full workshop kit, with ten guides; all ten workflows hardened.*
 
 ## Updates
 

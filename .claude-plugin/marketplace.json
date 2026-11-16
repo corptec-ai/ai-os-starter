@@ -10,6 +10,7 @@
     {
       "name": "ai-os-starter",
       "source": "./plugins/ai-os-starter",
+      "version": "0.5.1",
       "description": "Starter AI operating system for small and mid-sized businesses: workshop guides and ready-made workflows. Drafts only; nothing is sent."
     }
   ]

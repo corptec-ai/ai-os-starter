@@ -20,7 +20,9 @@ Make five realistic but **fictional** inputs for the owner's workflow, so they c
 - If a file is missing or still has `[[FILL]]`, say which one in one line, suggest `/business-dna-interview`, and carry on with plausible, generic samples for that industry, marked `[CHECK: DNA not filled; samples are generic]` in the README.
 
 ## Steps
-1. **Confirm the format in one line**, with a default they can accept with Return, e.g. "Five customer emails asking for hot water quotes, one markdown file each. OK?" If the input is tabular (an export, a list, a spreadsheet), the default is CSV.
+Where a question states a default, tell the person to type the word Accept to choose it. Any capitals is fine. Only the word Accept chooses the default. If they give a different answer of their own or say what to change, use that. Anything else, including `return`, asks the question again.
+
+1. **Confirm the format in one line**, with a default they can accept by typing the word Accept, e.g. "Five customer emails asking for hot water quotes, one markdown file each. OK? (type Accept for yes)" If the input is tabular (an export, a list, a spreadsheet), the default is CSV.
 2. **Plan the five samples:**
    - **Samples 1–3, typical:** each from a different customer segment or request type in the DNA.
    - **Sample 4, edge case:** realistic but missing one key detail the workflow needs (no address, no date, no headcount, no amount).
@@ -34,7 +36,7 @@ Make five realistic but **fictional** inputs for the owner's workflow, so they c
 4. **If you used an `inbox/` example,** check every sample: none of its names, emails, phone numbers, addresses or business names may appear. Take the structure, never the people.
 5. **Self-check before writing:** every email address ends exactly in `@example.com` (nothing between `@` and `example.com`), and every phone number is `0400 000` plus three digits. Fix any that don't, then write.
 6. **Write the README** with one line per sample: its type (typical, edge case or messy) and what it tests. Exactly one sample is marked messy and exactly one is marked edge case.
-7. **Show the person** the five one-line descriptions and the folder path, and suggest the next step: "Now run the simulated run in `/workflow-blueprint`."
+7. **Show the person** the five one-line descriptions and the folder path, and suggest the next step: "Now run the simulated run in `/workflow-blueprint`." If you offer any fixes (a sample to change, a different format), offer them as a question box (AskUserQuestion), not as text.
 
 ## Approval points
 - **Stop and ask before writing:** the one-line format confirmation in step 1. Default is yes.
